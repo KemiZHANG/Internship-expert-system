@@ -1,0 +1,422 @@
+[
+  {
+    "id": "F1",
+    "text": "Resume is completed",
+    "display_text": {
+      "en": "Resume is completed",
+      "zh": "已完成简历",
+      "ms": "Resume telah disiapkan"
+    },
+    "category": "Application Materials"
+  },
+  {
+    "id": "F2",
+    "text": "Resume is tailored to target internship",
+    "display_text": {
+      "en": "Resume is tailored to target internship",
+      "zh": "简历已根据目标实习岗位调整",
+      "ms": "Resume disesuaikan dengan latihan industri sasaran"
+    },
+    "category": "Application Materials"
+  },
+  {
+    "id": "F3",
+    "text": "Has at least one related academic or personal project",
+    "display_text": {
+      "en": "Has at least one related academic or personal project",
+      "zh": "至少有一个相关课程或个人项目",
+      "ms": "Mempunyai sekurang-kurangnya satu projek akademik atau peribadi berkaitan"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F4",
+    "text": "Has GitHub, portfolio, or project showcase",
+    "display_text": {
+      "en": "Has GitHub, portfolio, or project showcase",
+      "zh": "有 GitHub、作品集或项目展示",
+      "ms": "Mempunyai GitHub, portfolio, atau paparan projek"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F5",
+    "text": "Has basic programming skill",
+    "display_text": {
+      "en": "Has basic programming skill",
+      "zh": "具备基础编程能力",
+      "ms": "Mempunyai kemahiran asas pengaturcaraan"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F6",
+    "text": "Understands basic AI, data, or software concepts",
+    "display_text": {
+      "en": "Understands basic AI, data, or software concepts",
+      "zh": "理解基础 AI、数据或软件概念",
+      "ms": "Memahami konsep asas AI, data, atau perisian"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F7",
+    "text": "Has practiced internship interview questions",
+    "display_text": {
+      "en": "Has practiced internship interview questions",
+      "zh": "练习过实习面试问题",
+      "ms": "Pernah berlatih soalan temu duga latihan industri"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F8",
+    "text": "Can introduce self and project in English",
+    "display_text": {
+      "en": "Can introduce self and project in English",
+      "zh": "能用英文介绍自己和项目",
+      "ms": "Boleh memperkenalkan diri dan projek dalam bahasa Inggeris"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F9",
+    "text": "Knows target internship role clearly",
+    "display_text": {
+      "en": "Knows target internship role clearly",
+      "zh": "清楚知道目标实习岗位",
+      "ms": "Mengetahui peranan latihan industri sasaran dengan jelas"
+    },
+    "category": "Career Direction"
+  },
+  {
+    "id": "F10",
+    "text": "Has applied to at least 5 companies",
+    "display_text": {
+      "en": "Has applied to at least 5 companies",
+      "zh": "已申请至少 5 家公司",
+      "ms": "Telah memohon sekurang-kurangnya 5 syarikat"
+    },
+    "category": "Application Progress"
+  },
+  {
+    "id": "F11",
+    "text": "Has previous work, club, volunteer, freelance, or project experience",
+    "display_text": {
+      "en": "Has previous work, club, volunteer, freelance, or project experience",
+      "zh": "有工作、社团、志愿、自由职业或项目经验",
+      "ms": "Mempunyai pengalaman kerja, kelab, sukarelawan, bebas, atau projek"
+    },
+    "category": "Soft Skills and Work Readiness"
+  },
+  {
+    "id": "F12",
+    "text": "Has prepared LinkedIn or professional profile",
+    "display_text": {
+      "en": "Has prepared LinkedIn or professional profile",
+      "zh": "已准备 LinkedIn 或专业档案",
+      "ms": "Telah menyediakan LinkedIn atau profil profesional"
+    },
+    "category": "Application Materials"
+  },
+  {
+    "id": "F13",
+    "text": "Can explain technical projects clearly",
+    "display_text": {
+      "en": "Can explain technical projects clearly",
+      "zh": "能清楚解释技术项目",
+      "ms": "Boleh menerangkan projek teknikal dengan jelas"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F14",
+    "text": "Has researched company and job requirements",
+    "display_text": {
+      "en": "Has researched company and job requirements",
+      "zh": "已研究公司和岗位要求",
+      "ms": "Telah menyelidik syarikat dan keperluan kerja"
+    },
+    "category": "Career Direction"
+  },
+  {
+    "id": "F15",
+    "text": "Has weak technical foundation",
+    "display_text": {
+      "en": "Has weak technical foundation",
+      "zh": "技术基础较弱",
+      "ms": "Asas teknikal masih lemah"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F16",
+    "text": "Has no related project",
+    "display_text": {
+      "en": "Has no related project",
+      "zh": "没有相关项目",
+      "ms": "Tiada projek berkaitan"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F17",
+    "text": "Has not prepared interview",
+    "display_text": {
+      "en": "Has not prepared interview",
+      "zh": "尚未准备面试",
+      "ms": "Belum membuat persediaan temu duga"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F18",
+    "text": "Has unclear career direction",
+    "display_text": {
+      "en": "Has unclear career direction",
+      "zh": "职业方向不清楚",
+      "ms": "Hala tuju kerjaya belum jelas"
+    },
+    "category": "Career Direction"
+  },
+  {
+    "id": "F19",
+    "text": "Has no resume",
+    "display_text": {
+      "en": "Has no resume",
+      "zh": "没有简历",
+      "ms": "Tiada resume"
+    },
+    "category": "Application Materials"
+  },
+  {
+    "id": "F20",
+    "text": "Has not applied to companies yet",
+    "display_text": {
+      "en": "Has not applied to companies yet",
+      "zh": "尚未申请公司",
+      "ms": "Belum memohon kepada mana-mana syarikat"
+    },
+    "category": "Application Progress"
+  },
+  {
+    "id": "F21",
+    "text": "Has applied to fewer than 5 companies",
+    "display_text": {
+      "en": "Has applied to fewer than 5 companies",
+      "zh": "已申请少于 5 家公司",
+      "ms": "Telah memohon kurang daripada 5 syarikat"
+    },
+    "category": "Application Progress"
+  },
+  {
+    "id": "F22",
+    "text": "Has prepared cover letter",
+    "display_text": {
+      "en": "Has prepared cover letter",
+      "zh": "已准备求职信",
+      "ms": "Telah menyediakan surat iringan"
+    },
+    "category": "Application Materials"
+  },
+  {
+    "id": "F23",
+    "text": "Has prepared transcript or academic documents",
+    "display_text": {
+      "en": "Has prepared transcript or academic documents",
+      "zh": "已准备成绩单或学术文件",
+      "ms": "Telah menyediakan transkrip atau dokumen akademik"
+    },
+    "category": "Application Materials"
+  },
+  {
+    "id": "F24",
+    "text": "Has two or more related projects",
+    "display_text": {
+      "en": "Has two or more related projects",
+      "zh": "有两个或以上相关项目",
+      "ms": "Mempunyai dua atau lebih projek berkaitan"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F25",
+    "text": "Can explain project goal",
+    "display_text": {
+      "en": "Can explain project goal",
+      "zh": "能解释项目目标",
+      "ms": "Boleh menerangkan matlamat projek"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F26",
+    "text": "Can explain technical implementation",
+    "display_text": {
+      "en": "Can explain technical implementation",
+      "zh": "能解释技术实现",
+      "ms": "Boleh menerangkan pelaksanaan teknikal"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F27",
+    "text": "Has deployed project or demo",
+    "display_text": {
+      "en": "Has deployed project or demo",
+      "zh": "有已部署项目或演示",
+      "ms": "Mempunyai projek atau demo yang telah diterbitkan"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F28",
+    "text": "Has GitHub repository with README",
+    "display_text": {
+      "en": "Has GitHub repository with README",
+      "zh": "GitHub 仓库包含 README",
+      "ms": "Repositori GitHub mempunyai README"
+    },
+    "category": "Project and Portfolio"
+  },
+  {
+    "id": "F29",
+    "text": "Has Python, Java, or SQL basics",
+    "display_text": {
+      "en": "Has Python, Java, or SQL basics",
+      "zh": "具备 Python、Java 或 SQL 基础",
+      "ms": "Mempunyai asas Python, Java, atau SQL"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F30",
+    "text": "Understands Git version control",
+    "display_text": {
+      "en": "Understands Git version control",
+      "zh": "理解 Git 版本控制",
+      "ms": "Memahami kawalan versi Git"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F31",
+    "text": "Understands database basics",
+    "display_text": {
+      "en": "Understands database basics",
+      "zh": "理解数据库基础",
+      "ms": "Memahami asas pangkalan data"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F32",
+    "text": "Has problem-solving skill",
+    "display_text": {
+      "en": "Has problem-solving skill",
+      "zh": "具备问题解决能力",
+      "ms": "Mempunyai kemahiran menyelesaikan masalah"
+    },
+    "category": "Technical Skills"
+  },
+  {
+    "id": "F33",
+    "text": "Has practiced technical interview",
+    "display_text": {
+      "en": "Has practiced technical interview",
+      "zh": "练习过技术面试",
+      "ms": "Pernah berlatih temu duga teknikal"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F34",
+    "text": "Has practiced behavioral interview",
+    "display_text": {
+      "en": "Has practiced behavioral interview",
+      "zh": "练习过行为面试",
+      "ms": "Pernah berlatih temu duga tingkah laku"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F35",
+    "text": "Uses STAR method for behavioral answers",
+    "display_text": {
+      "en": "Uses STAR method for behavioral answers",
+      "zh": "使用 STAR 方法回答行为面试题",
+      "ms": "Menggunakan kaedah STAR untuk jawapan tingkah laku"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F36",
+    "text": "Has done mock interview",
+    "display_text": {
+      "en": "Has done mock interview",
+      "zh": "完成过模拟面试",
+      "ms": "Pernah melakukan temu duga olok-olok"
+    },
+    "category": "Interview Preparation"
+  },
+  {
+    "id": "F37",
+    "text": "Has compared job descriptions",
+    "display_text": {
+      "en": "Has compared job descriptions",
+      "zh": "比较过多个岗位描述",
+      "ms": "Telah membandingkan penerangan kerja"
+    },
+    "category": "Career Direction"
+  },
+  {
+    "id": "F38",
+    "text": "Understands required skills for target role",
+    "display_text": {
+      "en": "Understands required skills for target role",
+      "zh": "理解目标岗位所需技能",
+      "ms": "Memahami kemahiran yang diperlukan untuk peranan sasaran"
+    },
+    "category": "Career Direction"
+  },
+  {
+    "id": "F39",
+    "text": "Tracks application status",
+    "display_text": {
+      "en": "Tracks application status",
+      "zh": "记录申请进度",
+      "ms": "Menjejaki status permohonan"
+    },
+    "category": "Application Progress"
+  },
+  {
+    "id": "F40",
+    "text": "Sends follow-up email after application or interview",
+    "display_text": {
+      "en": "Sends follow-up email after application or interview",
+      "zh": "申请或面试后发送跟进邮件",
+      "ms": "Menghantar e-mel susulan selepas permohonan atau temu duga"
+    },
+    "category": "Application Progress"
+  },
+  {
+    "id": "F41",
+    "text": "Has communication skill",
+    "display_text": {
+      "en": "Has communication skill",
+      "zh": "具备沟通能力",
+      "ms": "Mempunyai kemahiran komunikasi"
+    },
+    "category": "Soft Skills and Work Readiness"
+  },
+  {
+    "id": "F42",
+    "text": "Has teamwork and time management experience",
+    "display_text": {
+      "en": "Has teamwork and time management experience",
+      "zh": "具备团队合作和时间管理经验",
+      "ms": "Mempunyai pengalaman kerja berpasukan dan pengurusan masa"
+    },
+    "category": "Soft Skills and Work Readiness"
+  }
+]

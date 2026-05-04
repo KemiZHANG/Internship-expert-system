@@ -1,0 +1,470 @@
+[
+  {
+    "id": "R1",
+    "name": "Strong application materials",
+    "type": "intermediate",
+    "conditions": {"all": ["F1", "F2", "F12"], "any": ["F22", "F23"]},
+    "conclusion": "D1",
+    "conclusion_text": "Application material readiness is high",
+    "explanation": "The student has a completed and tailored resume, a professional profile, and at least one supporting application document."
+  },
+  {
+    "id": "R2",
+    "name": "Weak application materials",
+    "type": "intermediate",
+    "conditions": {"any": ["F19"], "not": ["D1"]},
+    "conclusion": "D2",
+    "conclusion_text": "Application material readiness is low",
+    "explanation": "A missing resume is a critical application material gap."
+  },
+  {
+    "id": "R3",
+    "name": "Application materials are acceptable",
+    "type": "intermediate",
+    "conditions": {"all": ["F1"], "any": ["F2", "F12", "F22"], "not": ["F19"]},
+    "conclusion": "D14",
+    "conclusion_text": "Application materials are acceptable",
+    "explanation": "The student has a resume and at least one additional professional application signal."
+  },
+  {
+    "id": "R4",
+    "name": "Supporting documents are prepared",
+    "type": "intermediate",
+    "conditions": {"all": ["F22", "F23"]},
+    "conclusion": "D15",
+    "conclusion_text": "Supporting application documents are prepared",
+    "explanation": "The student has prepared a cover letter and academic documents for internship applications."
+  },
+  {
+    "id": "R5",
+    "name": "Strong project portfolio",
+    "type": "intermediate",
+    "conditions": {"all": ["F3", "F4", "F25", "F26"], "any": ["F24", "F27", "F28"]},
+    "conclusion": "D16",
+    "conclusion_text": "Project and portfolio readiness is high",
+    "explanation": "The student has project evidence, can explain the work, and has a stronger public portfolio signal."
+  },
+  {
+    "id": "R6",
+    "name": "No project evidence",
+    "type": "intermediate",
+    "conditions": {"all": ["F16"]},
+    "conclusion": "D17",
+    "conclusion_text": "Project and portfolio readiness is low",
+    "explanation": "No related project means the student lacks evidence for technical or applied ability."
+  },
+  {
+    "id": "R7",
+    "name": "Project explanation is strong",
+    "type": "intermediate",
+    "conditions": {"all": ["F25", "F26", "F13"]},
+    "conclusion": "D18",
+    "conclusion_text": "Project explanation is strong",
+    "explanation": "The student can explain the project goal, technical implementation, and technical decisions clearly."
+  },
+  {
+    "id": "R8",
+    "name": "Project explanation needs improvement",
+    "type": "intermediate",
+    "conditions": {"all": ["F3"], "not": ["F25", "F26", "F13"]},
+    "conclusion": "D19",
+    "conclusion_text": "Project explanation needs improvement",
+    "explanation": "The student has a project but cannot yet explain it clearly enough for interviews."
+  },
+  {
+    "id": "R9",
+    "name": "Portfolio needs improvement",
+    "type": "intermediate",
+    "conditions": {"all": ["F3"], "not": ["F4"]},
+    "conclusion": "D11",
+    "conclusion_text": "Portfolio needs improvement",
+    "explanation": "The student has a project but lacks a visible GitHub, portfolio, or showcase."
+  },
+  {
+    "id": "R10",
+    "name": "Technical readiness is high",
+    "type": "intermediate",
+    "conditions": {"all": ["F5", "F6", "F29", "F30", "F31", "F32"], "not": ["F15"]},
+    "conclusion": "D3",
+    "conclusion_text": "Technical readiness is high",
+    "explanation": "The student has programming basics, tool knowledge, problem-solving ability, and role-related concepts."
+  },
+  {
+    "id": "R11",
+    "name": "Technical readiness is medium",
+    "type": "intermediate",
+    "conditions": {"all": ["F5"], "any": ["F6", "F29", "F32"], "not": ["F15", "D3"]},
+    "conclusion": "D20",
+    "conclusion_text": "Technical readiness is medium",
+    "explanation": "The student has some technical foundation but does not yet satisfy all high-readiness signals."
+  },
+  {
+    "id": "R12",
+    "name": "Technical readiness is low",
+    "type": "intermediate",
+    "conditions": {"any": ["F15"], "not": ["D3"]},
+    "conclusion": "D4",
+    "conclusion_text": "Technical readiness is low",
+    "explanation": "Weak technical foundation is a major blocker for software, AI, or data internships."
+  },
+  {
+    "id": "R13",
+    "name": "AI or data role technical signal",
+    "type": "intermediate",
+    "conditions": {"all": ["F6"], "any": ["F31", "F32"]},
+    "conclusion": "D21",
+    "conclusion_text": "AI, data, or software concept readiness is present",
+    "explanation": "The student understands relevant concepts and can connect them to problem solving or data/database basics."
+  },
+  {
+    "id": "R14",
+    "name": "Interview readiness is high",
+    "type": "intermediate",
+    "conditions": {"all": ["F33", "F34", "F35", "F36", "F8", "D18"]},
+    "conclusion": "D5",
+    "conclusion_text": "Interview readiness is high",
+    "explanation": "The student has practiced technical and behavioral interviews, uses STAR, completed mock practice, and can explain projects."
+  },
+  {
+    "id": "R15",
+    "name": "Interview readiness is medium",
+    "type": "intermediate",
+    "conditions": {"all": ["F7"], "any": ["F33", "F34"], "not": ["D5", "F17"]},
+    "conclusion": "D22",
+    "conclusion_text": "Interview readiness is medium",
+    "explanation": "The student has practiced some internship interview questions but has not completed all high-readiness interview activities."
+  },
+  {
+    "id": "R16",
+    "name": "Interview readiness is low",
+    "type": "intermediate",
+    "conditions": {"all": ["F17"], "not": ["F7"]},
+    "conclusion": "D6",
+    "conclusion_text": "Interview readiness is low",
+    "explanation": "The student has not prepared for internship interviews."
+  },
+  {
+    "id": "R17",
+    "name": "Behavioral interview preparation is present",
+    "type": "intermediate",
+    "conditions": {"all": ["F34", "F35"]},
+    "conclusion": "D23",
+    "conclusion_text": "Behavioral interview preparation is present",
+    "explanation": "The student has practiced behavioral questions and uses the STAR method."
+  },
+  {
+    "id": "R18",
+    "name": "Career direction is clear",
+    "type": "intermediate",
+    "conditions": {"all": ["F9", "F14", "F37", "F38"]},
+    "conclusion": "D7",
+    "conclusion_text": "Career direction is clear",
+    "explanation": "The student knows a target role, compared job descriptions, researched companies, and understands required skills."
+  },
+  {
+    "id": "R19",
+    "name": "Career direction is partly clear",
+    "type": "intermediate",
+    "conditions": {"all": ["F9"], "any": ["F14", "F37", "F38"], "not": ["D7"]},
+    "conclusion": "D24",
+    "conclusion_text": "Career direction is partly clear",
+    "explanation": "The student has a target direction but still needs stronger job description matching or requirement analysis."
+  },
+  {
+    "id": "R20",
+    "name": "Career direction is unclear",
+    "type": "intermediate",
+    "conditions": {"all": ["F18"], "not": ["F9"]},
+    "conclusion": "D8",
+    "conclusion_text": "Career direction is unclear",
+    "explanation": "The student has not clearly identified a target internship role."
+  },
+  {
+    "id": "R21",
+    "name": "Company research is sufficient",
+    "type": "intermediate",
+    "conditions": {"all": ["F14", "F37"]},
+    "conclusion": "D12",
+    "conclusion_text": "Company and job research is sufficient",
+    "explanation": "The student has researched companies and compared job descriptions."
+  },
+  {
+    "id": "R22",
+    "name": "Application action is active",
+    "type": "intermediate",
+    "conditions": {"all": ["F10"]},
+    "conclusion": "D10",
+    "conclusion_text": "Application action is active",
+    "explanation": "The student has already applied to at least five companies."
+  },
+  {
+    "id": "R23",
+    "name": "Application action has started",
+    "type": "intermediate",
+    "conditions": {"all": ["F21"]},
+    "conclusion": "D25",
+    "conclusion_text": "Application action has started but is still limited",
+    "explanation": "The student has applied to fewer than five companies."
+  },
+  {
+    "id": "R24",
+    "name": "No application action yet",
+    "type": "intermediate",
+    "conditions": {"all": ["F20"]},
+    "conclusion": "D26",
+    "conclusion_text": "Application action has not started",
+    "explanation": "The student has not applied to any companies yet."
+  },
+  {
+    "id": "R25",
+    "name": "Application tracking is good",
+    "type": "intermediate",
+    "conditions": {"all": ["F39"], "any": ["F40", "F10"]},
+    "conclusion": "D27",
+    "conclusion_text": "Application tracking and follow-up are good",
+    "explanation": "The student tracks applications and either follows up or has an active application pipeline."
+  },
+  {
+    "id": "R26",
+    "name": "Work readiness is strong",
+    "type": "intermediate",
+    "conditions": {"all": ["F11", "F41", "F42"]},
+    "conclusion": "D9",
+    "conclusion_text": "Soft skills and work readiness are strong",
+    "explanation": "The student has experience, communication skill, and teamwork/time-management evidence."
+  },
+  {
+    "id": "R27",
+    "name": "Professional profile prepared",
+    "type": "intermediate",
+    "conditions": {"all": ["F1", "F12"]},
+    "conclusion": "D13",
+    "conclusion_text": "Professional profile is prepared",
+    "explanation": "The student has a resume and LinkedIn or another professional profile."
+  },
+  {
+    "id": "R28",
+    "name": "High internship readiness",
+    "type": "final",
+    "conditions": {"all": ["D1", "D16", "D3", "D5", "D7"], "any": ["D9", "D10"], "not": ["D4", "D6", "D8"]},
+    "conclusion": "FD1",
+    "conclusion_text": "High Internship Readiness",
+    "explanation": "Core preparation areas are strong: materials, portfolio, technical skills, interview preparation, and career direction."
+  },
+  {
+    "id": "R29",
+    "name": "Medium internship readiness",
+    "type": "final",
+    "conditions": {"all": ["D14", "D20", "D24"], "not": ["D2", "D4", "D8", "D17"]},
+    "conclusion": "FD2",
+    "conclusion_text": "Medium Internship Readiness",
+    "explanation": "The student has a usable foundation but still has gaps before full readiness."
+  },
+  {
+    "id": "R30",
+    "name": "Low internship readiness from weak materials and technical preparation",
+    "type": "final",
+    "conditions": {"all": ["D2", "D4"]},
+    "conclusion": "FD3",
+    "conclusion_text": "Low Internship Readiness",
+    "explanation": "Both application materials and technical readiness are low."
+  },
+  {
+    "id": "R31",
+    "name": "Low internship readiness from missing project, weak technical preparation, and unclear direction",
+    "type": "final",
+    "conditions": {"all": ["D17", "D4", "D8"]},
+    "conclusion": "FD3",
+    "conclusion_text": "Low Internship Readiness",
+    "explanation": "Project evidence, technical readiness, and career direction are all weak."
+  },
+  {
+    "id": "R32",
+    "name": "Ready to apply now",
+    "type": "final",
+    "conditions": {"all": ["FD1", "D10", "D27"]},
+    "conclusion": "FD4",
+    "conclusion_text": "Ready to apply now",
+    "explanation": "The student is prepared across major areas and has an active, tracked application process."
+  },
+  {
+    "id": "R33",
+    "name": "Need to improve technical preparation first",
+    "type": "final",
+    "conditions": {"all": ["D4"]},
+    "conclusion": "FD5",
+    "conclusion_text": "Need to improve technical preparation first",
+    "explanation": "Technical readiness is low, so foundations should be strengthened before broad applications."
+  },
+  {
+    "id": "R34",
+    "name": "Need to improve application materials first",
+    "type": "final",
+    "conditions": {"any": ["D2", "D17"]},
+    "conclusion": "FD6",
+    "conclusion_text": "Need to improve application materials first",
+    "explanation": "Application materials or project evidence are too weak, so resume, supporting materials, and portfolio evidence should be prepared first."
+  },
+  {
+    "id": "R35",
+    "name": "Need interview preparation before applying",
+    "type": "final",
+    "conditions": {"all": ["D6"], "not": ["D4", "D8"]},
+    "conclusion": "FD7",
+    "conclusion_text": "Need interview preparation before applying",
+    "explanation": "The student needs interview preparation before attending interviews."
+  },
+  {
+    "id": "R36",
+    "name": "Need to clarify target role first",
+    "type": "final",
+    "conditions": {"all": ["D8"]},
+    "conclusion": "FD8",
+    "conclusion_text": "Need to clarify target role first",
+    "explanation": "Career direction is unclear, so the student should identify a target role and compare requirements."
+  },
+  {
+    "id": "R37",
+    "name": "Need to improve project explanation",
+    "type": "final",
+    "conditions": {"all": ["D19"]},
+    "conclusion": "FD9",
+    "conclusion_text": "Need to improve project explanation",
+    "explanation": "The student has a project but cannot yet explain the goal or implementation clearly."
+  },
+  {
+    "id": "R38",
+    "name": "Need to improve application progress",
+    "type": "final",
+    "conditions": {"any": ["D25", "D26", "D28", "D29", "D30"], "not": ["D10", "D27"]},
+    "conclusion": "FD10",
+    "conclusion_text": "Need to improve application progress",
+    "explanation": "The student should improve application volume, tracking, follow-up, or job-description-based application preparation."
+  },
+  {
+    "id": "R39",
+    "name": "Portfolio recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D11"]},
+    "conclusion": "REC1",
+    "conclusion_text": "Improve portfolio or GitHub showcase",
+    "explanation": "A visible project showcase can help communicate project evidence to recruiters and interviewers."
+  },
+  {
+    "id": "R40",
+    "name": "Resume tailoring recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["F1"], "not": ["F2"]},
+    "conclusion": "REC2",
+    "conclusion_text": "Tailor resume for the target internship",
+    "explanation": "A completed resume should be adjusted to the target role and job requirements."
+  },
+  {
+    "id": "R41",
+    "name": "Application action recommendation",
+    "type": "recommendation",
+    "conditions": {"any": ["FD1", "FD2"], "not": ["D10"]},
+    "conclusion": "REC3",
+    "conclusion_text": "Start or increase applications",
+    "explanation": "The student appears prepared enough to build a stronger application pipeline."
+  },
+  {
+    "id": "R42",
+    "name": "Interview practice recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D6"]},
+    "conclusion": "REC4",
+    "conclusion_text": "Practice technical and behavioral interview questions",
+    "explanation": "Interview practice is required before the student can confidently communicate readiness."
+  },
+  {
+    "id": "R43",
+    "name": "Technical foundation recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D4"]},
+    "conclusion": "REC5",
+    "conclusion_text": "Strengthen programming and role-related technical basics",
+    "explanation": "Weak technical foundation should be addressed with focused practice and explainable projects."
+  },
+  {
+    "id": "R44",
+    "name": "Career direction recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D8"]},
+    "conclusion": "REC6",
+    "conclusion_text": "Clarify target role and compare job requirements",
+    "explanation": "Clear role direction helps the student choose relevant skills, projects, and resume keywords."
+  },
+  {
+    "id": "R45",
+    "name": "Project explanation recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D19"]},
+    "conclusion": "REC7",
+    "conclusion_text": "Prepare a clear project explanation",
+    "explanation": "The student should practice explaining project goals, implementation, challenges, and results."
+  },
+  {
+    "id": "R46",
+    "name": "Application tracking is missing",
+    "type": "intermediate",
+    "conditions": {"any": ["F10", "F21"], "not": ["F39"]},
+    "conclusion": "D28",
+    "conclusion_text": "Application tracking is missing",
+    "explanation": "The student has applied, but does not track application status systematically."
+  },
+  {
+    "id": "R47",
+    "name": "Application follow-up is missing",
+    "type": "intermediate",
+    "conditions": {"any": ["F10", "F21"], "not": ["F40"]},
+    "conclusion": "D29",
+    "conclusion_text": "Application follow-up is missing",
+    "explanation": "The student has applied, but does not send follow-up emails when appropriate."
+  },
+  {
+    "id": "R48",
+    "name": "Job description review before applying is missing",
+    "type": "intermediate",
+    "conditions": {"any": ["D25", "D26"], "not": ["F37"]},
+    "conclusion": "D30",
+    "conclusion_text": "Job description review before applying is missing",
+    "explanation": "The student should compare job descriptions before deciding where and how to apply."
+  },
+  {
+    "id": "R49",
+    "name": "Start applying recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D26"]},
+    "conclusion": "REC8",
+    "conclusion_text": "Start applying to selected companies",
+    "explanation": "The student has not applied yet, so the next step is to begin applying to suitable companies."
+  },
+  {
+    "id": "R50",
+    "name": "Application tracker recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D28"]},
+    "conclusion": "REC9",
+    "conclusion_text": "Track applications in a spreadsheet",
+    "explanation": "A tracking sheet can help the student record company, role, date, and application outcome."
+  },
+  {
+    "id": "R51",
+    "name": "Follow-up recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D29"]},
+    "conclusion": "REC10",
+    "conclusion_text": "Send polite follow-up emails when appropriate",
+    "explanation": "Polite follow-up messages can improve professionalism and help manage application progress."
+  },
+  {
+    "id": "R52",
+    "name": "Review job descriptions recommendation",
+    "type": "recommendation",
+    "conditions": {"all": ["D30"]},
+    "conclusion": "REC11",
+    "conclusion_text": "Review job descriptions before applying",
+    "explanation": "Comparing job descriptions helps the student target better-matched roles before applying."
+  }
+]

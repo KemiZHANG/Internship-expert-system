@@ -1,0 +1,86 @@
+[
+  {
+    "topic": "Internship preparation checklist",
+    "title": "UT Tyler Career and Internship Preparation Checklist",
+    "url": "https://www.uttyler.edu/academics/success-services/career-success/files/cs-checklist4.2.pdf",
+    "ideas_used": ["Create resume and cover letter", "Build LinkedIn profile", "Begin e-portfolio", "Practice interviewing", "Apply and attend career events"]
+  },
+  {
+    "topic": "Career readiness assessment",
+    "title": "NACE Career Readiness Competencies",
+    "url": "https://www.naceweb.org/career-readiness/competencies/career-readiness-defined",
+    "ideas_used": ["Career self-development", "Communication", "Critical thinking", "Professionalism", "Teamwork", "Technology"]
+  },
+  {
+    "topic": "Behavioral interview and STAR method",
+    "title": "Oregon State University: Using the STAR Method for Interviews",
+    "url": "https://career.oregonstate.edu/sites/career.oregonstate.edu/files/2024-09/UsingSTARmethodInterview.pdf",
+    "ideas_used": ["Use STAR for behavioral answers", "Match interview preparation to a job description", "Prepare concise stories from experience"]
+  },
+  {
+    "topic": "Behavioral interview and STAR method",
+    "title": "CSULB Internship Interview Prep Workbook",
+    "url": "https://cla.csulb.edu/clainternships/wp-content/uploads/2022/09/Workbook-Internship-Interview-Prep-Telling-Your-Internship-Story-Fall-2021.pdf",
+    "ideas_used": ["Behavioral questions ask for past examples", "Use Situation, Task, Action, Result", "Prepare internship stories"]
+  },
+  {
+    "topic": "Technical interview preparation",
+    "title": "Tech Interview Handbook",
+    "url": "https://dwf.dev/docs/learning-resources/tech-interview-handbook/",
+    "ideas_used": ["Coding interview evaluates communication, problem solving, technical competency, and testing", "Practice technical questions systematically", "Prepare self-introduction"]
+  },
+  {
+    "topic": "Application tracking and follow-up",
+    "title": "University of Georgia Application Follow-Up Template",
+    "url": "https://career.uga.edu/uploads/documents/Application-Follow-Up.pdf",
+    "ideas_used": ["Attach resume and cover letter when following up", "Professional follow-up communication can support applications"]
+  },
+  {
+    "topic": "Application tracking and follow-up",
+    "title": "Concordia University Irvine General Internship Guide",
+    "url": "https://www.cui.edu/portals/0/uploadedfiles/StudentLife/Career_Services/Career_Handouts/Internship_Handouts/General-Internship-Guide.pdf",
+    "ideas_used": ["Following up after application can show professionalism and interest", "Thank-you email after interview", "Track and communicate during the application process"]
+  },
+  {
+    "topic": "Portfolio and GitHub",
+    "title": "UIUC CS+CPSC Student Portfolio on GitHub",
+    "url": "https://cs-cpsc-uiuc.github.io/studenthowto.html",
+    "ideas_used": ["Use GitHub to showcase projects", "Create repositories that demonstrate project work"]
+  },
+  {
+    "topic": "CS internship preparation",
+    "title": "so-you-want-an-internship GitHub repository",
+    "url": "https://github.com/codebytere/so-you-want-an-internship",
+    "ideas_used": ["Prepare side projects", "Set up GitHub", "Review data structures and algorithms basics"]
+  },
+  {
+    "topic": "Rule-based expert system examples",
+    "title": "json-rules-engine GitHub repository",
+    "url": "https://github.com/CacheControl/json-rules-engine",
+    "ideas_used": ["Rules can be expressed in readable JSON", "Rules can use ALL and ANY logic operators"]
+  },
+  {
+    "topic": "Python rule engine examples",
+    "title": "python-rule-engine GitHub repository",
+    "url": "https://github.com/santalvarez/python-rule-engine",
+    "ideas_used": ["Python rule engines can evaluate rules defined in JSON format", "Separating rules from engine code improves maintainability"]
+  },
+  {
+    "topic": "Forward chaining expert systems",
+    "title": "Pyke Forward Chaining",
+    "url": "https://pyke.sourceforge.net/logic_programming/rules/forward_chaining.html",
+    "ideas_used": ["Forward chaining starts with known facts", "Rules fire and add new facts until no more rules can fire"]
+  },
+  {
+    "topic": "Streamlit decision support examples",
+    "title": "Streamlit GitHub repository",
+    "url": "https://github.com/streamlit/streamlit",
+    "ideas_used": ["Streamlit supports fast local interactive prototypes", "Widgets, columns, tabs, and dataframes help demonstrate decision support systems"]
+  },
+  {
+    "topic": "Streamlit documentation",
+    "title": "Streamlit documentation",
+    "url": "https://docs.streamlit.io/",
+    "ideas_used": ["Use local widgets, tabs, expanders, and dataframe views for a simple Expert System interface"]
+  }
+]

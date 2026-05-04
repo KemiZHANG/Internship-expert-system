@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.streamlit/secrets.toml
+.DS_Store
+Thumbs.db
+新建 文本文档.txt

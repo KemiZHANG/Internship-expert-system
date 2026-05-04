@@ -1,0 +1,136 @@
+{
+  "FD1": {
+    "title": "High Internship Readiness",
+    "summary": "The student is strongly prepared across the major internship preparation areas.",
+    "recommendation": "Apply actively and prepare for company-specific interviews.",
+    "next_steps": ["Apply consistently each week", "Prepare company-specific answers", "Review technical fundamentals", "Keep portfolio and resume updated"],
+    "priority": "Medium",
+    "display": {
+      "zh": {
+        "title": "高实习准备度",
+        "summary": "学生在主要实习准备领域表现较强。",
+        "recommendation": "积极申请，并准备针对不同公司的面试回答。",
+        "next_steps": ["每周持续申请", "准备公司相关回答", "复习技术基础", "持续更新作品集和简历"],
+        "priority": "中"
+      },
+      "ms": {
+        "title": "Kesediaan Latihan Industri Tinggi",
+        "summary": "Pelajar bersedia dengan baik dalam kebanyakan bidang persediaan latihan industri.",
+        "recommendation": "Mohon secara aktif dan bersedia untuk temu duga khusus syarikat.",
+        "next_steps": ["Mohon secara konsisten setiap minggu", "Sediakan jawapan khusus syarikat", "Ulang kaji asas teknikal", "Kemas kini portfolio dan resume"],
+        "priority": "Sederhana"
+      }
+    }
+  },
+  "FD2": {
+    "title": "Medium Internship Readiness",
+    "summary": "The student has useful preparation signals but still has important gaps.",
+    "recommendation": "Apply selectively while closing the weakest preparation areas.",
+    "next_steps": ["Improve the lowest-scoring area", "Tailor resume for each role", "Practice interviews", "Track applications and responses"],
+    "priority": "Medium",
+    "display": {
+      "zh": {
+        "title": "中等实习准备度",
+        "summary": "学生已有一些有效准备，但仍存在重要差距。",
+        "recommendation": "可以选择性申请，同时补强最弱的准备领域。",
+        "next_steps": ["提升最低分领域", "为每个岗位调整简历", "练习面试", "记录申请和回复"],
+        "priority": "中"
+      },
+      "ms": {
+        "title": "Kesediaan Latihan Industri Sederhana",
+        "summary": "Pelajar mempunyai beberapa tanda persediaan yang baik tetapi masih ada jurang penting.",
+        "recommendation": "Mohon secara terpilih sambil memperbaiki bidang yang paling lemah.",
+        "next_steps": ["Baiki bidang skor terendah", "Sesuaikan resume untuk setiap peranan", "Berlatih temu duga", "Jejaki permohonan dan maklum balas"],
+        "priority": "Sederhana"
+      }
+    }
+  },
+  "FD3": {
+    "title": "Low Internship Readiness",
+    "summary": "The student is not ready to apply widely because several major preparation areas are missing.",
+    "recommendation": "Build the basic resume, project evidence, technical foundation, and role clarity first.",
+    "next_steps": ["Complete a one-page resume", "Build at least one related project", "Prepare GitHub or portfolio", "Practice basic interview questions", "Clarify target internship role"],
+    "priority": "High",
+    "display": {
+      "zh": {
+        "title": "低实习准备度",
+        "summary": "学生暂时不适合广泛申请，因为多个关键准备领域缺失。",
+        "recommendation": "先建立简历、项目证据、技术基础和岗位方向。",
+        "next_steps": ["完成一页简历", "完成至少一个相关项目", "准备 GitHub 或作品集", "练习基础面试问题", "明确目标实习岗位"],
+        "priority": "高"
+      },
+      "ms": {
+        "title": "Kesediaan Latihan Industri Rendah",
+        "summary": "Pelajar belum sesuai memohon secara meluas kerana beberapa bidang utama belum lengkap.",
+        "recommendation": "Bina resume asas, bukti projek, asas teknikal, dan hala tuju peranan terlebih dahulu.",
+        "next_steps": ["Siapkan resume satu halaman", "Bina sekurang-kurangnya satu projek berkaitan", "Sediakan GitHub atau portfolio", "Berlatih soalan temu duga asas", "Jelaskan peranan latihan industri sasaran"],
+        "priority": "Tinggi"
+      }
+    }
+  },
+  "FD4": {
+    "title": "Ready to Apply Now",
+    "summary": "The student has strong readiness indicators and an active application process.",
+    "recommendation": "Continue applications and prepare for interview follow-ups.",
+    "next_steps": ["Apply to more suitable companies", "Research each company before interview", "Practice project walkthroughs", "Follow up and record application status"],
+    "priority": "Medium"
+  },
+  "FD5": {
+    "title": "Need to Improve Technical Preparation First",
+    "summary": "Technical readiness is the main blocker.",
+    "recommendation": "Strengthen programming basics, role-related concepts, and problem-solving practice.",
+    "next_steps": ["Review programming fundamentals", "Practice Python, Java, or SQL basics", "Review Git and database basics", "Build a small explainable project"],
+    "priority": "High"
+  },
+  "FD6": {
+    "title": "Need to Improve Application Materials First",
+    "summary": "Resume or supporting application materials are not strong enough yet.",
+    "recommendation": "Prepare a complete resume, supporting documents, and professional profile.",
+    "next_steps": ["Create or revise resume", "Tailor resume for target role", "Prepare cover letter and academic documents", "Prepare LinkedIn or professional profile"],
+    "priority": "High"
+  },
+  "FD7": {
+    "title": "Need Interview Preparation Before Applying",
+    "summary": "The student needs more interview practice before attending interviews.",
+    "recommendation": "Practice technical, behavioral, and self-introduction questions.",
+    "next_steps": ["Prepare self-introduction", "Practice technical questions", "Prepare STAR stories", "Do a mock interview"],
+    "priority": "High"
+  },
+  "FD8": {
+    "title": "Need to Clarify Target Role First",
+    "summary": "Career direction is unclear, making preparation less focused.",
+    "recommendation": "Choose a target internship role and study job descriptions before refining resume and projects.",
+    "next_steps": ["Compare 3 internship job descriptions", "Choose one primary target role", "List required skills", "Update resume and project plan for that role"],
+    "priority": "High"
+  },
+  "FD9": {
+    "title": "Need to Improve Project Explanation",
+    "summary": "The student has project evidence but cannot explain it clearly enough yet.",
+    "recommendation": "Practice explaining project goals, technical implementation, challenges, and results.",
+    "next_steps": ["Write a short project summary", "Improve project README", "Practice a 2-minute project walkthrough", "Explain technical choices and limitations"],
+    "priority": "High"
+  },
+  "FD10": {
+    "title": "Need to Improve Application Progress",
+    "summary": "The student should increase applications and manage the application process more systematically.",
+    "recommendation": "Build a weekly application routine, review job descriptions before applying, and track follow-up actions clearly.",
+    "next_steps": ["Start applying to selected companies", "Track applications in a spreadsheet", "Send polite follow-up emails when appropriate", "Review job descriptions before applying"],
+    "priority": "Medium",
+    "display": {
+      "zh": {
+        "title": "需要提升申请进度",
+        "summary": "学生需要增加申请数量，并更系统地管理申请流程。",
+        "recommendation": "建立每周申请节奏，在申请前先看岗位描述，并清楚记录后续跟进。",
+        "next_steps": ["开始申请合适的公司", "用表格追踪申请进度", "在合适的时候发送礼貌的跟进邮件", "申请前先查看岗位描述"],
+        "priority": "中"
+      },
+      "ms": {
+        "title": "Perlu Tingkatkan Kemajuan Permohonan",
+        "summary": "Pelajar perlu menambah jumlah permohonan dan mengurus proses permohonan dengan lebih sistematik.",
+        "recommendation": "Bina rutin permohonan mingguan, semak penerangan kerja sebelum memohon, dan rekod tindakan susulan dengan jelas.",
+        "next_steps": ["Mula memohon kepada syarikat yang sesuai", "Jejak permohonan dalam hamparan", "Hantar e-mel susulan yang sopan apabila sesuai", "Semak penerangan kerja sebelum memohon"],
+        "priority": "Sederhana"
+      }
+    }
+  }
+}
