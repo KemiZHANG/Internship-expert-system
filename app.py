@@ -4,6 +4,7 @@ import streamlit as st
 
 from inference_engine import forward_chain, load_json, readable_conditions
 from knowledge_base import load_facts, load_recommendations, load_references, load_rules
+from ui_state import VIEW_ORDER, normalize_view, view_after_analysis
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -419,17 +420,18 @@ def render_summary_cards(result, translations, lang):
 
 
 def render_component_scores(result, translations, lang):
-    rows = []
     for area, detail in result.get("readiness", {}).get("component_scores", {}).items():
-        rows.append(
-            {
-                t(translations, lang, "table.area"): t(translations, lang, f"area.{area}", area),
-                t(translations, lang, "table.score"): detail["score"],
-                t(translations, lang, "table.maximum"): detail["max"],
-                t(translations, lang, "table.percent"): f"{round((detail['score'] / detail['max']) * 100)}%",
-            }
+        percent = round((detail["score"] / detail["max"]) * 100)
+        st.markdown(
+            f"""
+            <div class="score-row">
+                <strong>{t(translations, lang, f"area.{area}", area)}</strong>
+                <div class="score-bar"><div class="score-fill" style="width: {percent}%"></div></div>
+                <span>{detail["score"]}/{detail["max"]}</span>
+            </div>
+            """,
+            unsafe_allow_html=True,
         )
-    st.dataframe(rows, use_container_width=True, hide_index=True)
 
 
 def render_readiness_decisions(result, translations, lang):
@@ -637,7 +639,472 @@ def render_kb_viewer(facts, rules, recommendations, references, translations, la
             st.write(f"- [{ref['title']}]({ref['url']})")
 
 
-def main():
+def get_query_view():
+    try:
+        return st.query_params.get("view")
+    except Exception:
+        return None
+
+
+def set_query_view(view):
+    try:
+        st.query_params["view"] = normalize_view(view)
+    except Exception:
+        return
+
+
+def initialize_navigation_state():
+    initial_view = normalize_view(get_query_view() or st.session_state.get("current_view"))
+    st.session_state.setdefault("current_view", initial_view)
+    st.session_state.current_view = normalize_view(st.session_state.current_view)
+    st.session_state.setdefault("view_selector", st.session_state.current_view)
+    st.session_state.view_selector = normalize_view(st.session_state.view_selector)
+
+
+def sync_navigation_selection():
+    st.session_state.current_view = normalize_view(st.session_state.get("view_selector"))
+    set_query_view(st.session_state.current_view)
+
+
+def show_results_after_analysis():
+    st.session_state.analysis_requested = True
+    st.session_state.current_view = view_after_analysis(st.session_state.get("current_view"))
+    st.session_state.view_selector = st.session_state.current_view
+    set_query_view(st.session_state.current_view)
+
+
+def navigate_to_view(view):
+    st.session_state.current_view = normalize_view(view)
+    st.session_state.view_selector = st.session_state.current_view
+    set_query_view(st.session_state.current_view)
+    st.rerun()
+
+
+def view_label(translations, lang, view):
+    label_key = {
+        "assessment": "tab.assessment",
+        "results": "tab.results",
+        "explanation": "tab.explanation",
+        "kb": "tab.kb",
+        "testing": "tab.testing",
+    }[view]
+    step = VIEW_ORDER.index(view) + 1
+    return f"{step}. {t(translations, lang, label_key)}"
+
+
+def assessment_from_state():
+    return {
+        "resume_status": st.session_state["resume_status"],
+        "project_status": st.session_state["project_status"],
+        "technical_foundation": st.session_state["technical_foundation"],
+        "interview_preparation": st.session_state["interview_preparation"],
+        "career_direction": st.session_state["career_direction"],
+        "application_progress": st.session_state["application_progress"],
+        "professional_profile": st.session_state["professional_profile"],
+        "cover_letter": st.session_state["cover_letter"],
+        "academic_documents": st.session_state["academic_documents"],
+        "experience": st.session_state["experience"],
+        "communication_skill": st.session_state["communication_skill"],
+        "teamwork_time": st.session_state["teamwork_time"],
+    }
+
+
+def render_app_styles():
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            color-scheme: dark;
+            background:
+                linear-gradient(135deg, #07111f 0%, #0d1b2e 48%, #101827 100%);
+            color: #eaf2ff;
+        }
+        [data-testid="stSidebar"] {
+            background: #070b14;
+            color: #eef4ff;
+            border-right: 1px solid rgba(148, 163, 184, 0.16);
+        }
+        [data-testid="stSidebar"] * {
+            color: #eef4ff !important;
+        }
+        .stApp [data-testid="stMarkdownContainer"],
+        .stApp [data-testid="stMarkdownContainer"] p,
+        .stApp [data-testid="stWidgetLabel"],
+        .stApp [data-testid="stWidgetLabel"] p,
+        .stApp label,
+        .stApp label p,
+        .stApp label span,
+        .stApp p,
+        .stApp span {
+            color: #eaf2ff !important;
+        }
+        h1, h2, h3, h4 {
+            color: #f8fbff !important;
+        }
+        .hero-panel {
+            border: 1px solid rgba(125, 211, 252, 0.18);
+            border-radius: 8px;
+            padding: 28px 30px;
+            margin-bottom: 20px;
+            background:
+                linear-gradient(135deg, rgba(12, 18, 34, 0.98), rgba(26, 70, 98, 0.9));
+            color: #ffffff;
+            box-shadow: 0 24px 70px rgba(0, 0, 0, 0.4);
+        }
+        .hero-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #7dd3fc !important;
+            font-size: 0.78rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+        .hero-title {
+            color: #ffffff !important;
+            font-size: 2.8rem;
+            line-height: 1.02;
+            font-weight: 900;
+            margin-bottom: 14px;
+            max-width: 900px;
+        }
+        .hero-subtitle {
+            color: rgba(234, 242, 255, 0.84) !important;
+            font-size: 1.02rem;
+            max-width: 820px;
+        }
+        .flow-card, .section-card, .summary-card, .recommendation-card {
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 8px;
+            background: rgba(15, 23, 42, 0.78);
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.28);
+            backdrop-filter: blur(12px);
+        }
+        .flow-card {
+            padding: 14px 16px 2px;
+            margin-bottom: 18px;
+        }
+        .stButton > button {
+            background: rgba(15, 23, 42, 0.94) !important;
+            border-radius: 8px !important;
+            border: 1px solid rgba(148, 163, 184, 0.2) !important;
+            color: #eaf2ff !important;
+            font-weight: 800 !important;
+            min-height: 44px;
+        }
+        .stButton > button[kind="primary"] {
+            background: linear-gradient(90deg, #2f6fed, #19b6a4) !important;
+            border: 0 !important;
+            color: #ffffff !important;
+        }
+        .stButton > button:hover {
+            border-color: rgba(125, 211, 252, 0.55) !important;
+            box-shadow: 0 0 0 2px rgba(125, 211, 252, 0.12);
+        }
+        .section-card {
+            padding: 22px;
+            margin: 14px 0;
+        }
+        .summary-card {
+            padding: 16px 18px;
+            min-height: 128px;
+        }
+        .summary-label {
+            font-size: 0.78rem;
+            color: #93a4bb !important;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 9px;
+        }
+        .summary-value {
+            font-size: 1.22rem;
+            font-weight: 800;
+            line-height: 1.25;
+            color: #f8fbff !important;
+            overflow-wrap: anywhere;
+        }
+        .result-hero {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 24px;
+            align-items: center;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 18px;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(30, 41, 59, 0.9));
+            border: 1px solid rgba(125, 211, 252, 0.18);
+            box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
+        }
+        .score-ring {
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: conic-gradient(#2f6fed var(--score), #e2eaf6 0);
+            position: relative;
+        }
+        .score-ring::after {
+            content: "";
+            position: absolute;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            background: #0b1220;
+        }
+        .score-ring span {
+            position: relative;
+            z-index: 1;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f8fbff !important;
+        }
+        .result-kicker {
+            color: #93a4bb !important;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .result-title {
+            color: #f8fbff !important;
+            font-size: 1.9rem;
+            font-weight: 900;
+            margin: 4px 0 8px;
+        }
+        .result-text {
+            color: #c7d2e5 !important;
+            line-height: 1.65;
+        }
+        .score-row {
+            display: grid;
+            grid-template-columns: minmax(160px, 260px) 1fr 78px;
+            gap: 14px;
+            align-items: center;
+            margin: 12px 0;
+        }
+        .score-bar {
+            height: 11px;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, 0.22);
+            overflow: hidden;
+        }
+        .score-fill {
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, #2f6fed, #19b6a4);
+        }
+        .soft-note {
+            color: #c7d2e5 !important;
+            font-size: 0.94rem;
+            line-height: 1.6;
+        }
+        .stRadio [role="radiogroup"],
+        .stCheckbox {
+            color: #eaf2ff !important;
+        }
+        div[data-baseweb="select"] > div {
+            background: rgba(15, 23, 42, 0.96) !important;
+            border: 1px solid rgba(148, 163, 184, 0.28) !important;
+            color: #f8fbff !important;
+        }
+        div[data-baseweb="select"] * {
+            color: #f8fbff !important;
+        }
+        div[data-baseweb="popover"] {
+            background: #0f172a !important;
+            color: #f8fbff !important;
+        }
+        input, textarea {
+            background: rgba(15, 23, 42, 0.96) !important;
+            color: #f8fbff !important;
+            border-color: rgba(148, 163, 184, 0.28) !important;
+        }
+        @media (max-width: 800px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .result-hero {
+                grid-template-columns: 1fr;
+            }
+            .score-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_hero(translations, lang):
+    st.markdown(
+        f"""
+        <div class="hero-panel">
+            <div class="hero-eyebrow">Rule-based advisory expert system</div>
+            <div class="hero-title">{t(translations, lang, "app.title")}</div>
+            <div class="hero-subtitle">{t(translations, lang, "app.subtitle")}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_navigation(translations, lang):
+    st.markdown('<div class="flow-card">', unsafe_allow_html=True)
+    cols = st.columns(len(VIEW_ORDER))
+    active_view = normalize_view(st.session_state.current_view)
+    for col, view in zip(cols, VIEW_ORDER):
+        with col:
+            if st.button(
+                view_label(translations, lang, view),
+                key=f"nav_{view}",
+                type="primary" if view == active_view else "secondary",
+                use_container_width=True,
+            ):
+                navigate_to_view(view)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+
+def render_assessment_view(translations, lang):
+    st.header(t(translations, lang, "tab.assessment"))
+    st.markdown(
+        f'<div class="section-card"><p class="soft-note">{t(translations, lang, "assessment.workflow_note")}</p></div>',
+        unsafe_allow_html=True,
+    )
+    st.selectbox(
+        t(translations, lang, "assessment.demo_case"),
+        list(DEMO_CASES.keys()),
+        key="demo_case",
+        format_func=lambda item: demo_label(translations, lang, item),
+        on_change=apply_demo_case,
+    )
+
+    col1, col2 = st.columns(2)
+    with col1:
+        st.radio(
+            t(translations, lang, "assessment.resume_status"),
+            FIELD_OPTIONS["resume_status"],
+            key="resume_status",
+            format_func=lambda item: option_label(translations, lang, "resume_status", item),
+        )
+        st.radio(
+            t(translations, lang, "assessment.project_status"),
+            FIELD_OPTIONS["project_status"],
+            key="project_status",
+            format_func=lambda item: option_label(translations, lang, "project_status", item),
+        )
+        st.radio(
+            t(translations, lang, "assessment.technical_foundation"),
+            FIELD_OPTIONS["technical_foundation"],
+            key="technical_foundation",
+            format_func=lambda item: option_label(translations, lang, "technical_foundation", item),
+        )
+        st.checkbox(t(translations, lang, "assessment.professional_profile"), key="professional_profile")
+        st.checkbox(t(translations, lang, "assessment.cover_letter"), key="cover_letter")
+        st.checkbox(t(translations, lang, "assessment.academic_documents"), key="academic_documents")
+
+    with col2:
+        st.radio(
+            t(translations, lang, "assessment.interview_preparation"),
+            FIELD_OPTIONS["interview_preparation"],
+            key="interview_preparation",
+            format_func=lambda item: option_label(translations, lang, "interview_preparation", item),
+        )
+        st.radio(
+            t(translations, lang, "assessment.career_direction"),
+            FIELD_OPTIONS["career_direction"],
+            key="career_direction",
+            format_func=lambda item: option_label(translations, lang, "career_direction", item),
+        )
+        st.radio(
+            t(translations, lang, "assessment.application_progress"),
+            FIELD_OPTIONS["application_progress"],
+            key="application_progress",
+            format_func=lambda item: option_label(translations, lang, "application_progress", item),
+        )
+        st.checkbox(t(translations, lang, "assessment.experience"), key="experience")
+        st.checkbox(t(translations, lang, "assessment.communication_skill"), key="communication_skill")
+        st.checkbox(t(translations, lang, "assessment.teamwork_time"), key="teamwork_time")
+
+    st.button(
+        t(translations, lang, "assessment.analyze"),
+        type="primary",
+        use_container_width=True,
+        on_click=show_results_after_analysis,
+    )
+    st.success(t(translations, lang, "assessment.mapping_note"))
+
+
+def render_result_hero(result, translations, lang):
+    readiness = result.get("readiness", {})
+    score = readiness.get("score", result.get("readiness_score", 0))
+    level = readiness.get("level", result.get("score_based_level", "Medium Internship Readiness"))
+    priority = readiness.get("main_priority_area", result.get("main_priority_area", "Application Materials"))
+    advice = readiness.get("main_advice", "Keep applying while improving the lowest-scoring preparation area.")
+    st.markdown(
+        f"""
+        <div class="result-hero">
+            <div class="score-ring" style="--score: {max(0, min(score, 100)) * 3.6}deg;"><span>{score}</span></div>
+            <div>
+                <div class="result-kicker">{t(translations, lang, "results.overall_readiness")}</div>
+                <div class="result-title">{t(translations, lang, f"level.{level_short(level).lower()}")}</div>
+                <div class="result-text">
+                    {t(translations, lang, "results.priority")}: <strong>{t(translations, lang, f"area.{priority}", priority)}</strong><br>
+                    {t(translations, lang, "results.advice")}: <strong>{t(translations, lang, f"advice.{advice}", advice)}</strong>
+                </div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_results_view(result, recommendations, translations, lang):
+    st.header(t(translations, lang, "tab.results"))
+    render_result_hero(result, translations, lang)
+    render_summary_cards(result, translations, lang)
+    st.caption(t(translations, lang, "results.overall_note"))
+    st.subheader(t(translations, lang, "results.component_scores"))
+    render_component_scores(result, translations, lang)
+    st.subheader(t(translations, lang, "results.rule_based_specific_advice"))
+    render_advice_decisions(result, translations, lang)
+    st.subheader(t(translations, lang, "results.recommendations"))
+    render_recommendations(result, recommendations, translations, lang)
+    with st.expander(t(translations, lang, "results.view_readiness_details"), expanded=False):
+        render_readiness_decisions(result, translations, lang)
+
+
+def render_testing_view(translations, lang):
+    st.header(t(translations, lang, "tab.testing"))
+    st.write(t(translations, lang, "testing.run_text"))
+    st.code("python tests/test_cases.py", language="bash")
+    st.subheader(t(translations, lang, "testing.why_expert_system"))
+    for key in (
+        "testing.expert_point_1",
+        "testing.expert_point_2",
+        "testing.expert_point_3",
+        "testing.expert_point_4",
+        "testing.expert_point_5",
+    ):
+        st.write(f"- {t(translations, lang, key)}")
+    st.subheader(t(translations, lang, "testing.architecture"))
+    st.code(architecture_flow_markdown(translations, lang), language="text")
+    st.write(t(translations, lang, "testing.demo_text"))
+    st.write("- Very prepared student -> High readiness")
+    st.write("- Medium prepared student -> Medium readiness")
+    st.write("- Low prepared student -> Low readiness")
+    st.write("- Strong technical but weak interview -> Need interview preparation")
+    st.write("- Good materials but unclear career direction -> Clarify target role")
+
+
+def legacy_tabbed_main():
+    """Deprecated rollback reference.
+
+    The active UI uses the controlled workflow in main(). This legacy tabbed
+    version is intentionally not called and can be removed after the new demo
+    flow is accepted by the group.
+    """
     st.set_page_config(page_title="Internship Preparation Advisory Expert System", layout="wide")
     initialize_assessment_state()
 
@@ -826,6 +1293,59 @@ def main():
         st.write("- Low prepared student -> Low readiness")
         st.write("- Strong technical but weak interview -> Need interview preparation")
         st.write("- Good materials but unclear career direction -> Clarify target role")
+
+
+def main():
+    st.set_page_config(page_title="Internship Preparation Advisory Expert System", layout="wide")
+    initialize_assessment_state()
+    initialize_navigation_state()
+
+    facts = load_facts()
+    rules = load_rules()
+    recommendations = load_recommendations()
+    references = load_references()
+    translations = load_translations()
+    fact_by_id = {fact["id"]: fact for fact in facts}
+
+    render_app_styles()
+
+    with st.sidebar:
+        st.selectbox(
+            "Language / 语言 / Bahasa",
+            list(LANGUAGE_OPTIONS.keys()),
+            key="language",
+        )
+        lang = LANGUAGE_OPTIONS[st.session_state.language]
+        st.header(t(translations, lang, "sidebar.project"))
+        st.write("Internship Preparation Advisory Expert System")
+        st.write("WID2001 Knowledge Representation and Reasoning")
+        st.markdown(f"**{t(translations, lang, 'sidebar.components')}**")
+        st.write("- KB: JSON facts, rules, recommendations")
+        st.write("- IE: forward chaining + readiness score")
+        st.write("- UI: Streamlit controlled workflow")
+        st.markdown(f"**{t(translations, lang, 'sidebar.run_mode')}**")
+        st.write(t(translations, lang, "sidebar.local"))
+
+    render_hero(translations, lang)
+    render_navigation(translations, lang)
+
+    assessment = assessment_from_state()
+    selected_facts = assessment_to_facts(assessment)
+    result = forward_chain(selected_facts, rules)
+    current_view = normalize_view(st.session_state.current_view)
+
+    if current_view == "assessment":
+        render_assessment_view(translations, lang)
+    elif current_view == "results":
+        render_results_view(result, recommendations, translations, lang)
+    elif current_view == "explanation":
+        st.header(t(translations, lang, "tab.explanation"))
+        render_explanation(result, fact_by_id, recommendations, translations, lang)
+    elif current_view == "kb":
+        st.header(t(translations, lang, "tab.kb"))
+        render_kb_viewer(facts, rules, recommendations, references, translations, lang, fact_by_id)
+    else:
+        render_testing_view(translations, lang)
 
 
 if __name__ == "__main__":
