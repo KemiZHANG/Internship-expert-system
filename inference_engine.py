@@ -316,3 +316,101 @@ def readable_conditions(conditions):
         if values:
             parts.append(f"{key.upper()}: {', '.join(values)}")
     return " | ".join(parts) if parts else "No conditions"
+
+
+def readiness_level_key(readiness_level):
+    if readiness_level.startswith("High"):
+        return "high"
+    if readiness_level.startswith("Medium"):
+        return "medium"
+    return "low"
+
+
+def recommend_career_paths(major_id, inference_result, career_paths, limit=3):
+    """Recommend internship role tracks from major, inferred readiness, and selected facts.
+
+    This helper is intentionally deterministic and data-driven. The role titles,
+    platform links, and source notes live in data/career_paths.json, while this
+    function only performs lightweight matching over the existing working memory.
+    """
+    majors = career_paths.get("majors", {})
+    role_tracks = career_paths.get("role_tracks", {})
+    selected_facts = set(inference_result.get("selected_facts", []))
+
+    if major_id not in majors:
+        major_id = "other_it_related" if "other_it_related" in majors else next(iter(majors))
+    major = majors[major_id]
+
+    readiness = inference_result.get("readiness", {})
+    readiness_level = readiness.get(
+        "level",
+        inference_result.get(
+            "score_based_level",
+            score_to_level(inference_result.get("readiness_score", 0)),
+        ),
+    )
+    level_key = readiness_level_key(readiness_level)
+
+    scored_tracks = []
+    track_ids = major.get("track_ids", [])
+    for order, track_id in enumerate(track_ids):
+        track = role_tracks.get(track_id)
+        if not track:
+            continue
+        required_facts = track.get("matching_facts", [])
+        matching_facts = [fact_id for fact_id in required_facts if fact_id in selected_facts]
+        missing_facts = [fact_id for fact_id in required_facts if fact_id not in selected_facts]
+        score = (len(matching_facts) * 3) - len(missing_facts) + (len(track_ids) - order)
+        scored_tracks.append((score, -order, track_id, track, matching_facts, missing_facts))
+
+    scored_tracks.sort(reverse=True)
+    recommended_tracks = []
+    source_ids = set()
+    matching_fact_union = set()
+
+    for _, _, track_id, track, matching_facts, missing_facts in scored_tracks[:limit]:
+        source_ids.update(track.get("source_ids", []))
+        matching_fact_union.update(matching_facts)
+        recommended_tracks.append(
+            {
+                "track_id": track_id,
+                "track_name": track.get("display_text", {}).get("en", track_id),
+                "display_text": track.get("display_text", {}),
+                "recommended_titles": track.get("readiness_titles", {}).get(level_key, []),
+                "fit_note": track.get("fit_notes", {}).get(level_key, ""),
+                "matching_facts": matching_facts,
+                "missing_facts": missing_facts,
+                "source_ids": track.get("source_ids", []),
+            }
+        )
+
+    platforms = recommend_job_platforms(career_paths.get("platforms", []), level_key)
+    for platform in platforms:
+        if platform.get("source_id"):
+            source_ids.add(platform["source_id"])
+
+    source_notes = {
+        source_id: note
+        for source_id, note in career_paths.get("source_notes", {}).items()
+        if source_id in source_ids
+    }
+
+    return {
+        "major_id": major_id,
+        "major": major,
+        "readiness_level": readiness_level,
+        "readiness_key": level_key,
+        "recommended_tracks": recommended_tracks,
+        "platforms": platforms,
+        "matching_facts": sorted(matching_fact_union),
+        "source_notes": source_notes,
+    }
+
+
+def recommend_job_platforms(platforms, readiness_key):
+    selected = [
+        platform
+        for platform in platforms
+        if readiness_key in platform.get("readiness_fit", [])
+    ]
+    return selected or platforms

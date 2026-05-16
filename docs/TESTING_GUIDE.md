@@ -12,14 +12,27 @@ Use this presentation flow:
 
 1. Assessment: choose a demo case or custom inputs.
 2. Results: show Level, Score, Priority, Advice, final decisions, and recommendations.
-3. Explanation: show facts -> rules -> intermediate decisions -> final readiness decision -> specific advice decisions -> recommendations.
-4. Knowledge Base: open the filtered Facts, Rules, and Recommendations viewers.
-5. Testing Guide: show how automated tests are executed.
+3. Results: show recommended internship role titles and job search platforms based on the selected major.
+4. Explanation: show facts -> rules -> intermediate decisions -> final readiness decision -> specific advice decisions -> recommendations -> career role matching.
+5. Knowledge Base: open the filtered Facts, Rules, Recommendations, and Career Paths viewers.
+6. Testing Guide: show how automated tests are executed.
 
 ## Run Automated Tests
 
 ```bash
 python tests/test_cases.py
+```
+
+Career-path recommendation tests:
+
+```bash
+python tests/test_career_paths.py
+```
+
+Translation integrity tests:
+
+```bash
+python tests/test_translations_integrity.py
 ```
 
 ## Test Cases
@@ -52,6 +65,21 @@ Each test prints:
 - overall PASS / PARTIAL PASS / FAIL
 
 `PARTIAL PASS` means the expected decision was found but the readiness level did not match the expected level.
+
+`tests/test_career_paths.py` checks that:
+
+- a high-readiness Computer Science student receives software engineering role suggestions
+- a medium-readiness Data Science / AI student receives data analyst role suggestions
+- a low-readiness Information Systems student receives preparatory role suggestions such as IT Support Intern rather than advanced software engineering roles
+- a high-readiness Accounting / Finance student receives finance-related role suggestions
+- a medium-readiness Marketing / Communication student receives marketing-related role suggestions
+- a low-readiness Psychology / Social Science student receives supervised support role suggestions
+- a high-readiness Engineering student receives engineering role suggestions
+
+`tests/test_translations_integrity.py` checks that:
+
+- translation and career-path JSON files do not contain common mojibake strings such as `??` or replacement characters
+- every major option has English, Chinese, and Bahasa Melayu labels
 
 ## Why This Is an Expert System, Not a Normal Survey
 

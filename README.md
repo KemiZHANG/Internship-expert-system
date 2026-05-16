@@ -40,8 +40,12 @@ It outputs:
 - Readiness Score out of 100
 - Main Priority Area
 - Rule-Based Specific Advice
+- Recommended internship role titles based on the selected major and readiness level
+- Job search platforms for finding related internship opportunities
 - Recommendations and Next Action Plan
 - Explanation Chain showing facts, rules, decisions, and recommendations
+
+The major-based role recommender now covers broad university study areas, not only computing. Example major groups include Accounting / Finance, Business Management / HR, Marketing / Communication, Economics / Statistics, Law / Public Policy, Psychology / Social Science, Education / TESL, Mass Communication / Media, Art / Design, Engineering, Health Sciences, Life / Environmental Science, Hospitality / Tourism, Logistics / Supply Chain, Agriculture / Food Science, Language / Linguistics, and Sports Science.
 
 ## 系统有什么作用
 
@@ -59,7 +63,7 @@ It outputs:
 
 | Component | Implementation |
 |---|---|
-| Knowledge Base, KB | `data/facts.json`, `data/rules.json`, `data/recommendations.json`, `data/references.json` |
+| Knowledge Base, KB | `data/facts.json`, `data/rules.json`, `data/recommendations.json`, `data/career_paths.json`, `data/references.json` |
 | Inference Engine, IE | `inference_engine.py` |
 | User Interface, UI | `app.py` with Streamlit |
 | Explanation Facility | Explanation tab in the Streamlit app |
@@ -84,6 +88,8 @@ Intermediate Decisions
 Final Readiness Level and Specific Advice
 ↓
 Recommendations and Next Action Plan
+↓
+Major-based Internship Role and Platform Suggestions
 ```
 
 中文说明：
@@ -112,6 +118,7 @@ Recommendations and Next Action Plan
 - Rules can infer intermediate decisions before final decisions.
 - The Explanation Facility shows which facts and rules produced the result.
 - The readiness score is supportive; rule-based reasoning remains the core.
+- The career-path recommender uses a separate knowledge base to match selected major, inferred readiness level, and preparation facts to suitable internship role titles and search platforms.
 
 ## 为什么这不是普通问卷
 
@@ -138,6 +145,7 @@ Internship_ES_Project/
 │   ├── facts.json
 │   ├── rules.json
 │   ├── recommendations.json
+│   ├── career_paths.json
 │   ├── references.json
 │   └── translations.json
 ├── tests/
@@ -241,15 +249,28 @@ python tests/test_cases.py
 
 The test suite includes 10 cases covering high, medium, low readiness, weak interview preparation, unclear career direction, weak application materials, weak project explanation, weak application progress, and boundary cases.
 
+Career-path recommendation tests can also be run with:
+
+```bash
+python tests/test_career_paths.py
+```
+
+Translation integrity tests can be run with:
+
+```bash
+python tests/test_translations_integrity.py
+```
+
 ## Demo Flow
 
 For a short presentation, use this flow:
 
 1. Open the Assessment tab and choose a demo case.
 2. Show the Results tab with Level, Score, Priority, and Advice.
-3. Open the Explanation tab to show facts, triggered rules, and inferred decisions.
-4. Open the Knowledge Base tab to show facts, rules, recommendations, and filters.
-5. Open the Testing Guide tab and explain the automated tests.
+3. Point out the recommended internship role titles and job search platforms.
+4. Open the Explanation tab to show facts, triggered rules, inferred decisions, and career matching.
+5. Open the Knowledge Base tab to show facts, rules, recommendations, career paths, and filters.
+6. Open the Testing Guide tab and explain the automated tests.
 
 ## Languages
 
@@ -268,6 +289,7 @@ Human Expert validation has not been completed in this initial prototype. After 
 - `data/facts.json`
 - `data/rules.json`
 - `data/recommendations.json`
+- `data/career_paths.json`
 - `data/references.json`
 - `docs/HUMAN_EXPERT_PLACEHOLDER.md`
 

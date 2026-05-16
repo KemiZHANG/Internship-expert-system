@@ -3,84 +3,353 @@
     "topic": "Internship preparation checklist",
     "title": "UT Tyler Career and Internship Preparation Checklist",
     "url": "https://www.uttyler.edu/academics/success-services/career-success/files/cs-checklist4.2.pdf",
-    "ideas_used": ["Create resume and cover letter", "Build LinkedIn profile", "Begin e-portfolio", "Practice interviewing", "Apply and attend career events"]
+    "ideas_used": [
+      "Create resume and cover letter",
+      "Build LinkedIn profile",
+      "Begin e-portfolio",
+      "Practice interviewing",
+      "Apply and attend career events"
+    ]
   },
   {
     "topic": "Career readiness assessment",
     "title": "NACE Career Readiness Competencies",
     "url": "https://www.naceweb.org/career-readiness/competencies/career-readiness-defined",
-    "ideas_used": ["Career self-development", "Communication", "Critical thinking", "Professionalism", "Teamwork", "Technology"]
+    "ideas_used": [
+      "Career self-development",
+      "Communication",
+      "Critical thinking",
+      "Professionalism",
+      "Teamwork",
+      "Technology"
+    ]
   },
   {
     "topic": "Behavioral interview and STAR method",
     "title": "Oregon State University: Using the STAR Method for Interviews",
     "url": "https://career.oregonstate.edu/sites/career.oregonstate.edu/files/2024-09/UsingSTARmethodInterview.pdf",
-    "ideas_used": ["Use STAR for behavioral answers", "Match interview preparation to a job description", "Prepare concise stories from experience"]
+    "ideas_used": [
+      "Use STAR for behavioral answers",
+      "Match interview preparation to a job description",
+      "Prepare concise stories from experience"
+    ]
   },
   {
     "topic": "Behavioral interview and STAR method",
     "title": "CSULB Internship Interview Prep Workbook",
     "url": "https://cla.csulb.edu/clainternships/wp-content/uploads/2022/09/Workbook-Internship-Interview-Prep-Telling-Your-Internship-Story-Fall-2021.pdf",
-    "ideas_used": ["Behavioral questions ask for past examples", "Use Situation, Task, Action, Result", "Prepare internship stories"]
+    "ideas_used": [
+      "Behavioral questions ask for past examples",
+      "Use Situation, Task, Action, Result",
+      "Prepare internship stories"
+    ]
   },
   {
     "topic": "Technical interview preparation",
     "title": "Tech Interview Handbook",
     "url": "https://dwf.dev/docs/learning-resources/tech-interview-handbook/",
-    "ideas_used": ["Coding interview evaluates communication, problem solving, technical competency, and testing", "Practice technical questions systematically", "Prepare self-introduction"]
+    "ideas_used": [
+      "Coding interview evaluates communication, problem solving, technical competency, and testing",
+      "Practice technical questions systematically",
+      "Prepare self-introduction"
+    ]
   },
   {
     "topic": "Application tracking and follow-up",
     "title": "University of Georgia Application Follow-Up Template",
     "url": "https://career.uga.edu/uploads/documents/Application-Follow-Up.pdf",
-    "ideas_used": ["Attach resume and cover letter when following up", "Professional follow-up communication can support applications"]
+    "ideas_used": [
+      "Attach resume and cover letter when following up",
+      "Professional follow-up communication can support applications"
+    ]
   },
   {
     "topic": "Application tracking and follow-up",
     "title": "Concordia University Irvine General Internship Guide",
     "url": "https://www.cui.edu/portals/0/uploadedfiles/StudentLife/Career_Services/Career_Handouts/Internship_Handouts/General-Internship-Guide.pdf",
-    "ideas_used": ["Following up after application can show professionalism and interest", "Thank-you email after interview", "Track and communicate during the application process"]
+    "ideas_used": [
+      "Following up after application can show professionalism and interest",
+      "Thank-you email after interview",
+      "Track and communicate during the application process"
+    ]
   },
   {
     "topic": "Portfolio and GitHub",
     "title": "UIUC CS+CPSC Student Portfolio on GitHub",
     "url": "https://cs-cpsc-uiuc.github.io/studenthowto.html",
-    "ideas_used": ["Use GitHub to showcase projects", "Create repositories that demonstrate project work"]
+    "ideas_used": [
+      "Use GitHub to showcase projects",
+      "Create repositories that demonstrate project work"
+    ]
   },
   {
     "topic": "CS internship preparation",
     "title": "so-you-want-an-internship GitHub repository",
     "url": "https://github.com/codebytere/so-you-want-an-internship",
-    "ideas_used": ["Prepare side projects", "Set up GitHub", "Review data structures and algorithms basics"]
+    "ideas_used": [
+      "Prepare side projects",
+      "Set up GitHub",
+      "Review data structures and algorithms basics"
+    ]
   },
   {
     "topic": "Rule-based expert system examples",
     "title": "json-rules-engine GitHub repository",
     "url": "https://github.com/CacheControl/json-rules-engine",
-    "ideas_used": ["Rules can be expressed in readable JSON", "Rules can use ALL and ANY logic operators"]
+    "ideas_used": [
+      "Rules can be expressed in readable JSON",
+      "Rules can use ALL and ANY logic operators"
+    ]
   },
   {
     "topic": "Python rule engine examples",
     "title": "python-rule-engine GitHub repository",
     "url": "https://github.com/santalvarez/python-rule-engine",
-    "ideas_used": ["Python rule engines can evaluate rules defined in JSON format", "Separating rules from engine code improves maintainability"]
+    "ideas_used": [
+      "Python rule engines can evaluate rules defined in JSON format",
+      "Separating rules from engine code improves maintainability"
+    ]
   },
   {
     "topic": "Forward chaining expert systems",
     "title": "Pyke Forward Chaining",
     "url": "https://pyke.sourceforge.net/logic_programming/rules/forward_chaining.html",
-    "ideas_used": ["Forward chaining starts with known facts", "Rules fire and add new facts until no more rules can fire"]
+    "ideas_used": [
+      "Forward chaining starts with known facts",
+      "Rules fire and add new facts until no more rules can fire"
+    ]
   },
   {
     "topic": "Streamlit decision support examples",
     "title": "Streamlit GitHub repository",
     "url": "https://github.com/streamlit/streamlit",
-    "ideas_used": ["Streamlit supports fast local interactive prototypes", "Widgets, columns, tabs, and dataframes help demonstrate decision support systems"]
+    "ideas_used": [
+      "Streamlit supports fast local interactive prototypes",
+      "Widgets, columns, tabs, and dataframes help demonstrate decision support systems"
+    ]
   },
   {
     "topic": "Streamlit documentation",
     "title": "Streamlit documentation",
     "url": "https://docs.streamlit.io/",
-    "ideas_used": ["Use local widgets, tabs, expanders, and dataframe views for a simple Expert System interface"]
+    "ideas_used": [
+      "Use local widgets, tabs, expanders, and dataframe views for a simple Expert System interface"
+    ]
+  },
+  {
+    "topic": "Major-to-role internship mapping",
+    "title": "BLS Occupational Outlook Handbook: Computer and Information Technology Occupations",
+    "url": "https://www.bls.gov/ooh/computer-and-information-technology/home.htm",
+    "ideas_used": [
+      "Used broad IT occupation families such as software, web, security, database, systems analyst, and support roles."
+    ]
+  },
+  {
+    "topic": "Software engineering and QA internship role track",
+    "title": "BLS Occupational Outlook Handbook: Software Developers, Quality Assurance Analysts, and Testers",
+    "url": "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm",
+    "ideas_used": [
+      "Mapped programming, software design, testing, problem solving, communication, and teamwork signals to software/QA role recommendations."
+    ]
+  },
+  {
+    "topic": "Data science and AI internship role track",
+    "title": "BLS Occupational Outlook Handbook: Data Scientists",
+    "url": "https://www.bls.gov/ooh/math/data-scientists.htm",
+    "ideas_used": [
+      "Mapped data analysis, algorithms, visualization, programming, database/statistical skills, and communication to data/AI role recommendations."
+    ]
+  },
+  {
+    "topic": "Cybersecurity internship role track",
+    "title": "BLS Occupational Outlook Handbook: Information Security Analysts",
+    "url": "https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm",
+    "ideas_used": [
+      "Mapped security monitoring, vulnerability awareness, reporting, and IT fundamentals to cybersecurity role recommendations."
+    ]
+  },
+  {
+    "topic": "Information systems major career paths",
+    "title": "University of Kansas Career Center: Information Systems",
+    "url": "https://career.ku.edu/information-systems",
+    "ideas_used": [
+      "Used information systems career paths such as systems analysis, computer support, database management, and information security."
+    ]
+  },
+  {
+    "topic": "MIS major career paths",
+    "title": "Texas A&M University Career Center: Management Information Systems",
+    "url": "https://careercenter.tamu.edu/current-students/explore-majors-and-careers/majors/management-information-systems/",
+    "ideas_used": [
+      "Mapped MIS/business-technology preparation to business analyst, IT analyst, consultant, software analyst, and web developer role ideas."
+    ]
+  },
+  {
+    "topic": "Information systems role tracks",
+    "title": "Wisconsin School of Business: Information Systems Major",
+    "url": "https://business.wisc.edu/undergraduate/majors/information-systems/",
+    "ideas_used": [
+      "Used listed IS jobs and career paths including business analyst, database administrator, IT analyst, systems analyst, BI and data roles."
+    ]
+  },
+  {
+    "topic": "Data science major career paths and job search",
+    "title": "University of Michigan Career Center: Data Science Track",
+    "url": "https://careercenter.umich.edu/article/data-science-track",
+    "ideas_used": [
+      "Used common entry titles such as data analyst, business analyst, machine learning engineer, data engineer, and advice to read job descriptions carefully."
+    ]
+  },
+  {
+    "topic": "Malaysia internship platform",
+    "title": "MyNext by TalentCorp Malaysia",
+    "url": "https://www.mynext.my/",
+    "ideas_used": [
+      "Used as a Malaysia structured internship and career exploration platform in job platform recommendations."
+    ]
+  },
+  {
+    "topic": "Malaysia internship platform",
+    "title": "JobStreet Malaysia Internships Jobs",
+    "url": "https://my.jobstreet.com/internships-jobs",
+    "ideas_used": [
+      "Used as a Malaysia internship search platform with ICT classification and internship filters."
+    ]
+  },
+  {
+    "topic": "Malaysia internship platform",
+    "title": "Hiredly Internships Malaysia",
+    "url": "https://my.hiredly.com/internships",
+    "ideas_used": [
+      "Used as a Malaysia internship platform where students can upload a resume and search by title or company."
+    ]
+  },
+  {
+    "topic": "Job and internship platform",
+    "title": "LinkedIn Jobs",
+    "url": "https://www.linkedin.com/jobs/",
+    "ideas_used": [
+      "Used as a global job and internship platform for role keyword searches, alerts, and professional networking."
+    ]
+  },
+  {
+    "topic": "Student internship platform",
+    "title": "Prosple Malaysia",
+    "url": "https://my.prosple.com/",
+    "ideas_used": [
+      "Used as a student/fresh graduate platform with internship categories such as IT, cyber security, and data analyst."
+    ]
+  },
+  {
+    "topic": "University career platform",
+    "title": "Handshake Help Center: Searching for Jobs and Internships",
+    "url": "https://support.joinhandshake.com/hc/en-us/articles/218693408-Searching-for-Jobs-and-Internships",
+    "ideas_used": [
+      "Used as a reference for university career portals, saved searches, and job alerts when students have access."
+    ]
+  },
+  {
+    "topic": "Broad major-to-career mapping",
+    "title": "BLS Occupational Outlook Handbook: Occupation Groups",
+    "url": "https://www.bls.gov/ooh/",
+    "ideas_used": [
+      "Used BLS occupation groups to expand the knowledge base beyond computing into business, engineering, media, education, healthcare, legal, science, social service, arts/design, and logistics-related role families."
+    ]
+  },
+  {
+    "topic": "Business, accounting, finance, HR, market research, logistics",
+    "title": "BLS Occupational Outlook Handbook: Business and Financial Occupations",
+    "url": "https://www.bls.gov/ooh/business-and-financial/home.htm",
+    "ideas_used": [
+      "Mapped accounting, finance, market research, HR, procurement, logistics, and analyst-style internship tracks."
+    ]
+  },
+  {
+    "topic": "Engineering major role families",
+    "title": "BLS Occupational Outlook Handbook: Architecture and Engineering Occupations",
+    "url": "https://www.bls.gov/ooh/architecture-and-engineering/home.htm",
+    "ideas_used": [
+      "Mapped engineering, electrical/electronic, mechanical, civil, manufacturing, quality, and built environment internship tracks."
+    ]
+  },
+  {
+    "topic": "Management, operations, marketing, HR, hospitality and events",
+    "title": "BLS Occupational Outlook Handbook: Management Occupations",
+    "url": "https://www.bls.gov/ooh/management/",
+    "ideas_used": [
+      "Mapped business operations, project coordination, marketing, HR, hospitality operations, and event management role tracks."
+    ]
+  },
+  {
+    "topic": "Supply chain and logistics roles",
+    "title": "BLS Occupational Outlook Handbook: Logisticians",
+    "url": "https://www.bls.gov/ooh/business-and-financial/logisticians.htm",
+    "ideas_used": [
+      "Mapped logistics, supply chain, warehouse operations, procurement, and logistics analyst internship suggestions."
+    ]
+  },
+  {
+    "topic": "Broad major exploration",
+    "title": "University of Maine Career Center: What Can I Do With This Major?",
+    "url": "https://umaine.edu/career/studentsalumni/career-planning/what-can-i-do-with-this-major/",
+    "ideas_used": [
+      "Used broad university major categories such as accounting, communication, finance, law, marketing, psychology, and engineering to expand major choices."
+    ]
+  },
+  {
+    "topic": "Broad major exploration",
+    "title": "Texas Tech University Career Center: What Can I Do With This Major?",
+    "url": "https://www.depts.ttu.edu/careercenter/careerexploration/wcidwtm.php",
+    "ideas_used": [
+      "Used broad major-to-career exploration categories as a public reference for expanding professional tracks."
+    ]
+  },
+  {
+    "topic": "Career resources by major",
+    "title": "Towson University: Career Resources by Major",
+    "url": "https://www.towson.edu/careercenter/planning-resources/major/",
+    "ideas_used": [
+      "Used the idea that career resources can include common career titles, internship opportunities, job search websites, resumes, and interview questions by field."
+    ]
+  },
+  {
+    "topic": "Major-to-career caution",
+    "title": "Middle Tennessee State University: What Can I Do With A Major In?",
+    "url": "https://www.mtsu.edu/career/majors/",
+    "ideas_used": [
+      "Used the caution that students work in careers, not majors, and that some careers accept many majors; the system therefore recommends role targets rather than guaranteeing a career."
+    ]
+  },
+  {
+    "topic": "Careers and majors relationship",
+    "title": "University of Kansas Career Center: Careers",
+    "url": "https://career.ku.edu/careers",
+    "ideas_used": [
+      "Used the idea that many careers do not require one specific major and employers often value experience, skills, interests, and abilities."
+    ]
+  },
+  {
+    "topic": "Psychology and social science career mapping",
+    "title": "University of Michigan Career Center: Psychology",
+    "url": "https://careercenter.umich.edu/article/psychology",
+    "ideas_used": [
+      "Mapped psychology skills such as research, analysis, interpersonal skills, and communication to human services, research, HR, education, and community roles."
+    ]
+  },
+  {
+    "topic": "Psychology career mapping",
+    "title": "Georgetown University: What Can I Do with My Psychology Major?",
+    "url": "https://careercenter.georgetown.edu/major-career-guides/what-can-i-do-with-my-major/georgetown-college/psychology/",
+    "ideas_used": [
+      "Used psychology skills and cross-industry options such as human relations, management, consulting, advertising, business, and marketing."
+    ]
+  },
+  {
+    "topic": "Malaysia broad internship platform",
+    "title": "gradmalaysia: Find Jobs & Internships",
+    "url": "https://gradmalaysia.com/jobs-internships",
+    "ideas_used": [
+      "Added gradmalaysia as a broad Malaysia internship platform for business, engineering, marketing, sustainability, and other student opportunities."
+    ]
   }
 ]

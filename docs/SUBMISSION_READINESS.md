@@ -10,6 +10,7 @@ streamlit run app.py
 
 ```bash
 python tests/test_cases.py
+python tests/test_career_paths.py
 ```
 
 ## Files to Show in the Demo
@@ -17,6 +18,7 @@ python tests/test_cases.py
 - `app.py`
 - `data/rules.json`
 - `data/facts.json`
+- `data/career_paths.json`
 - Results page
 - Explanation page
 - Knowledge Base page
@@ -28,6 +30,7 @@ python tests/test_cases.py
 - Results page
 - Explanation page
 - Knowledge Base page
+- Recommended roles and job platforms section
 - Testing result terminal screenshot
 - System architecture flow
 
@@ -48,10 +51,11 @@ python tests/test_cases.py
 
 1. Open the Assessment tab and choose a demo case.
 2. Show the Results tab with readiness level, score, main priority area, and specific advice.
-3. Open the Explanation tab and show how facts triggered rules and decisions.
-4. Open the Knowledge Base tab and show facts, rules, recommendations, and filters.
-5. Open the Testing Guide tab and explain why this is an Expert System, not a normal survey.
-6. Show the terminal output from `python tests/test_cases.py`.
+3. Show the recommended internship role titles and job search platforms generated from the selected major and readiness level.
+4. Open the Explanation tab and show how facts triggered rules and decisions, then show the career matching explanation.
+5. Open the Knowledge Base tab and show facts, rules, recommendations, career paths, and filters.
+6. Open the Testing Guide tab and explain why this is an Expert System, not a normal survey.
+7. Show the terminal output from `python tests/test_cases.py` and `python tests/test_career_paths.py`.
 
 ## Submission Status
 

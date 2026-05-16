@@ -2,8 +2,8 @@ from pathlib import Path
 
 import streamlit as st
 
-from inference_engine import forward_chain, load_json, readable_conditions
-from knowledge_base import load_facts, load_recommendations, load_references, load_rules
+from inference_engine import forward_chain, load_json, readable_conditions, recommend_career_paths
+from knowledge_base import load_career_paths, load_facts, load_recommendations, load_references, load_rules
 from ui_state import VIEW_ORDER, normalize_view, view_after_analysis
 
 
@@ -64,6 +64,7 @@ LEGACY_FIELD_VALUES = {
 
 
 ASSESSMENT_DEFAULTS = {
+    "major": "computer_science",
     "resume_status": "resume_not_tailored",
     "project_status": "one_project",
     "technical_foundation": "basic",
@@ -82,6 +83,7 @@ ASSESSMENT_DEFAULTS = {
 DEMO_CASES = {
     "custom": ASSESSMENT_DEFAULTS,
     "very_prepared": {
+        "major": "computer_science",
         "resume_status": "resume_tailored",
         "project_status": "strong_portfolio",
         "technical_foundation": "strong",
@@ -96,6 +98,7 @@ DEMO_CASES = {
         "teamwork_time": True,
     },
     "medium_prepared": {
+        "major": "data_science_ai",
         "resume_status": "resume_tailored",
         "project_status": "github_readme",
         "technical_foundation": "good",
@@ -110,6 +113,7 @@ DEMO_CASES = {
         "teamwork_time": False,
     },
     "low_prepared": {
+        "major": "information_systems",
         "resume_status": "no_resume",
         "project_status": "no_project",
         "technical_foundation": "weak",
@@ -124,6 +128,7 @@ DEMO_CASES = {
         "teamwork_time": False,
     },
     "strong_technical_weak_interview": {
+        "major": "software_engineering",
         "resume_status": "resume_tailored",
         "project_status": "strong_portfolio",
         "technical_foundation": "strong",
@@ -138,6 +143,7 @@ DEMO_CASES = {
         "teamwork_time": True,
     },
     "good_materials_unclear_direction": {
+        "major": "business_analytics",
         "resume_status": "resume_tailored",
         "project_status": "strong_portfolio",
         "technical_foundation": "good",
@@ -155,6 +161,36 @@ DEMO_CASES = {
 
 
 FIELD_OPTIONS = {
+    "major": [
+        "computer_science",
+        "software_engineering",
+        "information_systems",
+        "data_science_ai",
+        "cybersecurity",
+        "business_analytics",
+        "multimedia_it",
+        "accounting_finance",
+        "business_management_hr",
+        "marketing_communication",
+        "economics_statistics",
+        "law_public_policy",
+        "psychology_social_science",
+        "education_tesl",
+        "mass_communication_media",
+        "art_design_creative",
+        "engineering_general",
+        "electrical_electronic_engineering",
+        "mechanical_mechatronics",
+        "civil_architecture_qs",
+        "health_sciences_biomedical",
+        "life_environmental_science",
+        "hospitality_tourism",
+        "logistics_supply_chain",
+        "agriculture_food_science",
+        "language_linguistics",
+        "sports_science",
+        "other_it_related",
+    ],
     "resume_status": ["no_resume", "resume_not_tailored", "resume_tailored"],
     "project_status": ["no_project", "one_project", "github_readme", "strong_portfolio"],
     "technical_foundation": ["weak", "basic", "good", "strong"],
@@ -165,7 +201,7 @@ FIELD_OPTIONS = {
 
 READINESS_DECISION_IDS = {"FD1", "FD2", "FD3"}
 RULE_TYPE_OPTIONS = ["all", "intermediate", "final", "recommendation"]
-OBJECT_TYPE_OPTIONS = ["all", "facts", "rules", "recommendations"]
+OBJECT_TYPE_OPTIONS = ["all", "facts", "rules", "recommendations", "career_paths"]
 
 
 def load_translations():
@@ -193,6 +229,13 @@ def localized_recommendation(item, lang, field):
 
 def option_label(translations, lang, field, option_id):
     return t(translations, lang, f"option.{field}.{option_id}", t(translations, lang, f"option.{option_id}", option_id))
+
+
+def localized_dict_text(item, lang, field, default=""):
+    values = item.get(field, {})
+    if isinstance(values, dict):
+        return values.get(lang) or values.get("en") or default
+    return values or default
 
 
 def demo_label(translations, lang, demo_id):
@@ -475,7 +518,45 @@ def render_recommendations(result, recommendations, translations, lang):
             st.write(f"- {rule['conclusion_text']}: {rule['explanation']}")
 
 
-def render_explanation(result, fact_by_id, recommendations, translations, lang):
+def render_career_recommendations(career_result, translations, lang):
+    if not career_result:
+        return
+
+    major_name = localized_dict_text(career_result.get("major", {}), lang, "display_text", career_result.get("major_id", ""))
+    readiness_level = career_result.get("readiness_level", "")
+    st.subheader(t(translations, lang, "career.section_title"))
+    st.caption(
+        t(translations, lang, "career.section_note").format(
+            major=major_name,
+            level=t(translations, lang, f"readiness.{readiness_level}", readiness_level),
+        )
+    )
+
+    for track in career_result.get("recommended_tracks", []):
+        track_name = localized_dict_text(track, lang, "display_text", track.get("track_name", track.get("track_id", "")))
+        titles = ", ".join(track.get("recommended_titles", []))
+        matching = ", ".join(track.get("matching_facts", [])) or "-"
+        missing = ", ".join(track.get("missing_facts", [])) or "-"
+        st.markdown(f"**{track.get('track_id')} - {track_name}**")
+        st.write(f"{t(translations, lang, 'career.recommended_titles')}: {titles}")
+        st.write(f"{t(translations, lang, 'career.fit_note')}: {track.get('fit_note', '')}")
+        st.caption(
+            f"{t(translations, lang, 'career.matching_facts')}: {matching} | "
+            f"{t(translations, lang, 'career.missing_signals')}: {missing}"
+        )
+
+    st.subheader(t(translations, lang, "career.platforms"))
+    for platform in career_result.get("platforms", []):
+        use_tip = localized_dict_text(platform, lang, "use_tip", platform.get("name", ""))
+        best_for = ", ".join(platform.get("best_for", []))
+        st.write(
+            f"- **[{platform['name']}]({platform['url']})** "
+            f"({platform.get('region', '-')}) - {use_tip} "
+            f"{t(translations, lang, 'career.best_for')}: {best_for}"
+        )
+
+
+def render_explanation(result, fact_by_id, recommendations, translations, lang, career_result=None):
     st.subheader(t(translations, lang, "explain.selected_facts"))
     for fact_id in result.get("selected_facts", []):
         fact = fact_by_id.get(fact_id, {"text": fact_id})
@@ -530,6 +611,30 @@ def render_explanation(result, fact_by_id, recommendations, translations, lang):
     st.subheader(t(translations, lang, "explain.recommendations"))
     render_recommendations(result, recommendations, translations, lang)
 
+    if career_result:
+        st.markdown("### ↓")
+        st.subheader(t(translations, lang, "career.explanation_title"))
+        major_name = localized_dict_text(career_result.get("major", {}), lang, "display_text", career_result.get("major_id", ""))
+        career_readiness_level = career_result.get("readiness_level", "")
+        localized_career_level = t(
+            translations,
+            lang,
+            f"readiness.{career_readiness_level}",
+            career_readiness_level,
+        )
+        st.write(f"{t(translations, lang, 'career.selected_major')}: **{major_name}**")
+        st.write(f"{t(translations, lang, 'career.readiness_used')}: **{localized_career_level}**")
+        st.write(
+            f"{t(translations, lang, 'career.matching_facts')}: "
+            f"{', '.join(career_result.get('matching_facts', [])) or '-'}"
+        )
+        for track in career_result.get("recommended_tracks", []):
+            track_name = localized_dict_text(track, lang, "display_text", track.get("track_name", ""))
+            st.write(
+                f"- {track.get('track_id')} - {track_name}: "
+                f"{', '.join(track.get('recommended_titles', []))}"
+            )
+
     with st.expander(t(translations, lang, "explain.detailed_chain"), expanded=False):
         explanation_chain = result.get("explanation_chain", {"start": "", "steps": [], "end": ""})
         st.write(explanation_chain.get("start", ""))
@@ -540,7 +645,7 @@ def render_explanation(result, fact_by_id, recommendations, translations, lang):
             st.write(step["explanation"])
         st.write(explanation_chain.get("end", ""))
 
-def render_kb_viewer(facts, rules, recommendations, references, translations, lang, fact_by_id):
+def render_kb_viewer(facts, rules, recommendations, references, translations, lang, fact_by_id, career_paths=None):
     st.markdown(f"**{t(translations, lang, 'kb.filters')}**")
     filter_col1, filter_col2, filter_col3 = st.columns(3)
     with filter_col1:
@@ -633,6 +738,48 @@ def render_kb_viewer(facts, rules, recommendations, references, translations, la
             ]
             st.dataframe(recommendation_rows, use_container_width=True, hide_index=True)
 
+    if career_paths and object_filter in {"all", "career_paths"}:
+        with st.expander(t(translations, lang, "kb.view_career_paths"), expanded=False):
+            major_rows = [
+                {
+                    "Major ID": major_id,
+                    "Major": localized_dict_text(major, lang, "display_text", major_id),
+                    "Description": localized_dict_text(major, lang, "description", ""),
+                    "Role Tracks": ", ".join(major.get("track_ids", [])),
+                }
+                for major_id, major in career_paths.get("majors", {}).items()
+            ]
+            st.markdown(f"**{t(translations, lang, 'career.majors')}**")
+            st.dataframe(major_rows, use_container_width=True, hide_index=True)
+
+            track_rows = [
+                {
+                    "Track ID": track_id,
+                    "Track": localized_dict_text(track, lang, "display_text", track_id),
+                    "Matching Facts": ", ".join(track.get("matching_facts", [])),
+                    "Low": ", ".join(track.get("readiness_titles", {}).get("low", [])),
+                    "Medium": ", ".join(track.get("readiness_titles", {}).get("medium", [])),
+                    "High": ", ".join(track.get("readiness_titles", {}).get("high", [])),
+                    "Sources": ", ".join(track.get("source_ids", [])),
+                }
+                for track_id, track in career_paths.get("role_tracks", {}).items()
+            ]
+            st.markdown(f"**{t(translations, lang, 'career.role_tracks')}**")
+            st.dataframe(track_rows, use_container_width=True, hide_index=True)
+
+            platform_rows = [
+                {
+                    "Platform": platform["name"],
+                    "Region": platform.get("region", ""),
+                    "URL": platform["url"],
+                    "Use Tip": localized_dict_text(platform, lang, "use_tip", ""),
+                    "Best For": ", ".join(platform.get("best_for", [])),
+                }
+                for platform in career_paths.get("platforms", [])
+            ]
+            st.markdown(f"**{t(translations, lang, 'career.platforms')}**")
+            st.dataframe(platform_rows, use_container_width=True, hide_index=True)
+
     with st.expander(t(translations, lang, "kb.source_note"), expanded=False):
         st.info(ACADEMIC_NOTE)
         for ref in references:
@@ -694,6 +841,7 @@ def view_label(translations, lang, view):
 
 def assessment_from_state():
     return {
+        "major": st.session_state["major"],
         "resume_status": st.session_state["resume_status"],
         "project_status": st.session_state["project_status"],
         "technical_foundation": st.session_state["technical_foundation"],
@@ -979,6 +1127,13 @@ def render_assessment_view(translations, lang):
         format_func=lambda item: demo_label(translations, lang, item),
         on_change=apply_demo_case,
     )
+    st.selectbox(
+        t(translations, lang, "assessment.major"),
+        FIELD_OPTIONS["major"],
+        key="major",
+        format_func=lambda item: option_label(translations, lang, "major", item),
+        help=t(translations, lang, "assessment.major_help"),
+    )
 
     col1, col2 = st.columns(2)
     with col1:
@@ -1060,7 +1215,7 @@ def render_result_hero(result, translations, lang):
     )
 
 
-def render_results_view(result, recommendations, translations, lang):
+def render_results_view(result, recommendations, translations, lang, career_result=None):
     st.header(t(translations, lang, "tab.results"))
     render_result_hero(result, translations, lang)
     render_summary_cards(result, translations, lang)
@@ -1069,6 +1224,7 @@ def render_results_view(result, recommendations, translations, lang):
     render_component_scores(result, translations, lang)
     st.subheader(t(translations, lang, "results.rule_based_specific_advice"))
     render_advice_decisions(result, translations, lang)
+    render_career_recommendations(career_result, translations, lang)
     st.subheader(t(translations, lang, "results.recommendations"))
     render_recommendations(result, recommendations, translations, lang)
     with st.expander(t(translations, lang, "results.view_readiness_details"), expanded=False):
@@ -1153,7 +1309,7 @@ def legacy_tabbed_main():
         st.write("Internship Preparation Advisory Expert System")
         st.write("WID2001 Knowledge Representation and Reasoning")
         st.markdown(f"**{t(translations, lang, 'sidebar.components')}**")
-        st.write("- KB: JSON facts, rules, recommendations")
+        st.write("- KB: JSON facts, rules, recommendations, career paths")
         st.write("- IE: forward chaining + readiness score")
         st.write("- UI: Streamlit")
         st.markdown(f"**{t(translations, lang, 'sidebar.run_mode')}**")
@@ -1304,6 +1460,7 @@ def main():
     rules = load_rules()
     recommendations = load_recommendations()
     references = load_references()
+    career_paths = load_career_paths()
     translations = load_translations()
     fact_by_id = {fact["id"]: fact for fact in facts}
 
@@ -1320,7 +1477,7 @@ def main():
         st.write("Internship Preparation Advisory Expert System")
         st.write("WID2001 Knowledge Representation and Reasoning")
         st.markdown(f"**{t(translations, lang, 'sidebar.components')}**")
-        st.write("- KB: JSON facts, rules, recommendations")
+        st.write("- KB: JSON facts, rules, recommendations, career paths")
         st.write("- IE: forward chaining + readiness score")
         st.write("- UI: Streamlit controlled workflow")
         st.markdown(f"**{t(translations, lang, 'sidebar.run_mode')}**")
@@ -1332,18 +1489,19 @@ def main():
     assessment = assessment_from_state()
     selected_facts = assessment_to_facts(assessment)
     result = forward_chain(selected_facts, rules)
+    career_result = recommend_career_paths(assessment["major"], result, career_paths)
     current_view = normalize_view(st.session_state.current_view)
 
     if current_view == "assessment":
         render_assessment_view(translations, lang)
     elif current_view == "results":
-        render_results_view(result, recommendations, translations, lang)
+        render_results_view(result, recommendations, translations, lang, career_result)
     elif current_view == "explanation":
         st.header(t(translations, lang, "tab.explanation"))
-        render_explanation(result, fact_by_id, recommendations, translations, lang)
+        render_explanation(result, fact_by_id, recommendations, translations, lang, career_result)
     elif current_view == "kb":
         st.header(t(translations, lang, "tab.kb"))
-        render_kb_viewer(facts, rules, recommendations, references, translations, lang, fact_by_id)
+        render_kb_viewer(facts, rules, recommendations, references, translations, lang, fact_by_id, career_paths)
     else:
         render_testing_view(translations, lang)
 

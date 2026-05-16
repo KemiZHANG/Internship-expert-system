@@ -1,0 +1,2613 @@
+{
+  "majors": {
+    "computer_science": {
+      "display_text": {
+        "en": "Computer Science",
+        "zh": "计算机科学",
+        "ms": "Sains Komputer"
+      },
+      "description": {
+        "en": "Broad computing major suitable for software, web, data, testing, and security internship tracks.",
+        "zh": "覆盖面较广的计算机专业，适合软件、网页、数据、测试和安全相关实习方向。",
+        "ms": "Bidang pengkomputeran yang luas, sesuai untuk trek perisian, web, data, ujian dan keselamatan."
+      },
+      "track_ids": [
+        "software_engineering",
+        "web_development",
+        "qa_testing",
+        "data_analysis",
+        "cybersecurity"
+      ]
+    },
+    "software_engineering": {
+      "display_text": {
+        "en": "Software Engineering",
+        "zh": "软件工程",
+        "ms": "Kejuruteraan Perisian"
+      },
+      "description": {
+        "en": "Best aligned with software development, QA, web development, and systems analysis internships.",
+        "zh": "最适合软件开发、软件测试、网页开发和系统分析相关实习。",
+        "ms": "Sesuai untuk latihan industri pembangunan perisian, QA, pembangunan web dan analisis sistem."
+      },
+      "track_ids": [
+        "software_engineering",
+        "qa_testing",
+        "web_development",
+        "systems_analysis"
+      ]
+    },
+    "information_systems": {
+      "display_text": {
+        "en": "Information Systems",
+        "zh": "信息系统",
+        "ms": "Sistem Maklumat"
+      },
+      "description": {
+        "en": "Connects business needs with IT systems, databases, support, and systems analysis roles.",
+        "zh": "连接业务需求与 IT 系统，适合数据库、技术支持和系统分析相关岗位。",
+        "ms": "Menghubungkan keperluan bisnes dengan sistem IT, pangkalan data, sokongan dan analisis sistem."
+      },
+      "track_ids": [
+        "it_support",
+        "systems_analysis",
+        "business_analysis",
+        "database"
+      ]
+    },
+    "data_science_ai": {
+      "display_text": {
+        "en": "Data Science / Artificial Intelligence",
+        "zh": "数据科学 / 人工智能",
+        "ms": "Sains Data / Kecerdasan Buatan"
+      },
+      "description": {
+        "en": "Best aligned with data analysis, business intelligence, data engineering, and AI/ML internships.",
+        "zh": "适合数据分析、商业智能、数据工程和 AI/ML 相关实习。",
+        "ms": "Sesuai untuk analisis data, kecerdasan bisnes, kejuruteraan data dan latihan AI/ML."
+      },
+      "track_ids": [
+        "data_analysis",
+        "machine_learning",
+        "business_analysis",
+        "database"
+      ]
+    },
+    "cybersecurity": {
+      "display_text": {
+        "en": "Cybersecurity",
+        "zh": "网络安全",
+        "ms": "Keselamatan Siber"
+      },
+      "description": {
+        "en": "Best aligned with information security, SOC, network support, and IT operations internships.",
+        "zh": "适合信息安全、SOC、网络支持和 IT 运维相关实习。",
+        "ms": "Sesuai untuk keselamatan maklumat, SOC, sokongan rangkaian dan operasi IT."
+      },
+      "track_ids": [
+        "cybersecurity",
+        "network_support",
+        "it_support"
+      ]
+    },
+    "business_analytics": {
+      "display_text": {
+        "en": "Business Analytics",
+        "zh": "商业分析",
+        "ms": "Analitik Bisnes"
+      },
+      "description": {
+        "en": "Best aligned with data analyst, business analyst, product analyst, and BI internship tracks.",
+        "zh": "适合数据分析、业务分析、产品分析和 BI 相关实习方向。",
+        "ms": "Sesuai untuk trek penganalisis data, penganalisis bisnes, penganalisis produk dan BI."
+      },
+      "track_ids": [
+        "business_analysis",
+        "data_analysis",
+        "systems_analysis"
+      ]
+    },
+    "multimedia_it": {
+      "display_text": {
+        "en": "Multimedia / IT / Digital Media",
+        "zh": "多媒体 / IT / 数字媒体",
+        "ms": "Multimedia / IT / Media Digital"
+      },
+      "description": {
+        "en": "Best aligned with front-end, web development, UI/UX, and digital design internships.",
+        "zh": "适合前端、网页开发、UI/UX 和数字设计相关实习。",
+        "ms": "Sesuai untuk front-end, pembangunan web, UI/UX dan reka bentuk digital."
+      },
+      "track_ids": [
+        "web_development",
+        "ui_ux",
+        "software_engineering"
+      ]
+    },
+    "other_it_related": {
+      "display_text": {
+        "en": "Other IT-related Major",
+        "zh": "其他 IT 相关专业",
+        "ms": "Bidang IT Berkaitan Lain"
+      },
+      "description": {
+        "en": "A general IT-related path. The system recommends broader support, analyst, testing, and junior developer roles.",
+        "zh": "通用 IT 相关方向，系统会推荐较宽泛的支持、分析、测试和初级开发岗位。",
+        "ms": "Laluan IT umum. Sistem mencadangkan peranan sokongan, analisis, ujian dan pembangun junior."
+      },
+      "track_ids": [
+        "it_support",
+        "business_analysis",
+        "qa_testing",
+        "web_development"
+      ]
+    },
+    "accounting_finance": {
+      "display_text": {
+        "en": "Accounting / Finance",
+        "zh": "会计 / 金融",
+        "ms": "Perakaunan / Kewangan"
+      },
+      "description": {
+        "en": "Suitable for accounting, audit, banking, finance, risk, and business analysis internships.",
+        "zh": "适合会计、审计、银行、金融、风险和业务分析相关实习。",
+        "ms": "Sesuai untuk latihan perakaunan, audit, perbankan, kewangan, risiko dan analisis bisnes."
+      },
+      "track_ids": [
+        "finance_banking",
+        "accounting_audit",
+        "business_analysis",
+        "market_research"
+      ]
+    },
+    "business_management_hr": {
+      "display_text": {
+        "en": "Business Management / Human Resources",
+        "zh": "工商管理 / 人力资源",
+        "ms": "Pengurusan Perniagaan / Sumber Manusia"
+      },
+      "description": {
+        "en": "Suitable for operations, HR, project coordination, administration, and management trainee internships.",
+        "zh": "适合运营、人力资源、项目协调、行政和管理培训生相关实习。",
+        "ms": "Sesuai untuk operasi, HR, koordinasi projek, pentadbiran dan latihan pengurusan."
+      },
+      "track_ids": [
+        "business_operations",
+        "human_resources",
+        "project_coordination",
+        "business_analysis"
+      ]
+    },
+    "marketing_communication": {
+      "display_text": {
+        "en": "Marketing / Communication",
+        "zh": "市场营销 / 传播",
+        "ms": "Pemasaran / Komunikasi"
+      },
+      "description": {
+        "en": "Suitable for digital marketing, content, public relations, branding, media, and market research internships.",
+        "zh": "适合数字营销、内容、公关、品牌、媒体和市场研究相关实习。",
+        "ms": "Sesuai untuk pemasaran digital, kandungan, PR, jenama, media dan penyelidikan pasaran."
+      },
+      "track_ids": [
+        "marketing_digital",
+        "public_relations",
+        "content_media",
+        "market_research"
+      ]
+    },
+    "economics_statistics": {
+      "display_text": {
+        "en": "Economics / Statistics / Mathematics",
+        "zh": "经济学 / 统计 / 数学",
+        "ms": "Ekonomi / Statistik / Matematik"
+      },
+      "description": {
+        "en": "Suitable for data, market research, finance, policy research, actuarial, and analytics internships.",
+        "zh": "适合数据、市场研究、金融、政策研究、精算和分析类实习。",
+        "ms": "Sesuai untuk data, penyelidikan pasaran, kewangan, dasar, aktuari dan analitik."
+      },
+      "track_ids": [
+        "data_analysis",
+        "market_research",
+        "finance_banking",
+        "policy_research"
+      ]
+    },
+    "law_public_policy": {
+      "display_text": {
+        "en": "Law / Public Policy / International Relations",
+        "zh": "法律 / 公共政策 / 国际关系",
+        "ms": "Undang-undang / Dasar Awam / Hubungan Antarabangsa"
+      },
+      "description": {
+        "en": "Suitable for legal, compliance, policy research, public administration, NGO, and international relations internships.",
+        "zh": "适合法律、合规、政策研究、公共行政、NGO 和国际关系相关实习。",
+        "ms": "Sesuai untuk undang-undang, pematuhan, penyelidikan dasar, pentadbiran awam, NGO dan hubungan antarabangsa."
+      },
+      "track_ids": [
+        "legal",
+        "policy_research",
+        "public_admin",
+        "public_relations"
+      ]
+    },
+    "psychology_social_science": {
+      "display_text": {
+        "en": "Psychology / Social Science",
+        "zh": "心理学 / 社会科学",
+        "ms": "Psikologi / Sains Sosial"
+      },
+      "description": {
+        "en": "Suitable for human services, research, HR, community work, education support, and market research internships.",
+        "zh": "适合社会服务、研究、人力资源、社区工作、教育支持和市场研究相关实习。",
+        "ms": "Sesuai untuk perkhidmatan manusia, penyelidikan, HR, kerja komuniti, sokongan pendidikan dan penyelidikan pasaran."
+      },
+      "track_ids": [
+        "psychology_human_services",
+        "human_resources",
+        "market_research",
+        "education_training"
+      ]
+    },
+    "education_tesl": {
+      "display_text": {
+        "en": "Education / TESL / Language Education",
+        "zh": "教育 / TESL / 语言教育",
+        "ms": "Pendidikan / TESL / Pendidikan Bahasa"
+      },
+      "description": {
+        "en": "Suitable for teaching assistant, tutoring, curriculum, training, and education technology internships.",
+        "zh": "适合教学助理、辅导、课程设计、培训和教育科技相关实习。",
+        "ms": "Sesuai untuk pembantu pengajar, tutor, kurikulum, latihan dan teknologi pendidikan."
+      },
+      "track_ids": [
+        "education_training",
+        "translation_content",
+        "public_admin",
+        "content_media"
+      ]
+    },
+    "mass_communication_media": {
+      "display_text": {
+        "en": "Mass Communication / Journalism / Media",
+        "zh": "大众传播 / 新闻 / 媒体",
+        "ms": "Komunikasi Massa / Kewartawanan / Media"
+      },
+      "description": {
+        "en": "Suitable for journalism, public relations, social media, content production, and corporate communication internships.",
+        "zh": "适合新闻、公关、社交媒体、内容制作和企业传播相关实习。",
+        "ms": "Sesuai untuk kewartawanan, PR, media sosial, penghasilan kandungan dan komunikasi korporat."
+      },
+      "track_ids": [
+        "journalism_media",
+        "public_relations",
+        "content_media",
+        "marketing_digital"
+      ]
+    },
+    "art_design_creative": {
+      "display_text": {
+        "en": "Art / Design / Creative Media",
+        "zh": "艺术 / 设计 / 创意媒体",
+        "ms": "Seni / Reka Bentuk / Media Kreatif"
+      },
+      "description": {
+        "en": "Suitable for graphic design, UI/UX, multimedia, branding, content, and creative production internships.",
+        "zh": "适合平面设计、UI/UX、多媒体、品牌、内容和创意制作相关实习。",
+        "ms": "Sesuai untuk reka bentuk grafik, UI/UX, multimedia, jenama, kandungan dan produksi kreatif."
+      },
+      "track_ids": [
+        "graphic_design",
+        "ui_ux",
+        "content_media",
+        "marketing_digital"
+      ]
+    },
+    "engineering_general": {
+      "display_text": {
+        "en": "Engineering / Manufacturing",
+        "zh": "工程 / 制造",
+        "ms": "Kejuruteraan / Pembuatan"
+      },
+      "description": {
+        "en": "Suitable for engineering, manufacturing, quality, project coordination, operations, and R&D internships.",
+        "zh": "适合工程、制造、质量、项目协调、运营和研发相关实习。",
+        "ms": "Sesuai untuk kejuruteraan, pembuatan, kualiti, koordinasi projek, operasi dan R&D."
+      },
+      "track_ids": [
+        "engineering",
+        "quality_manufacturing",
+        "project_coordination",
+        "operations_management"
+      ]
+    },
+    "electrical_electronic_engineering": {
+      "display_text": {
+        "en": "Electrical / Electronic / Telecommunications Engineering",
+        "zh": "电气 / 电子 / 通信工程",
+        "ms": "Kejuruteraan Elektrik / Elektronik / Telekomunikasi"
+      },
+      "description": {
+        "en": "Suitable for electronics, electrical, telecommunications, embedded systems, testing, and infrastructure internships.",
+        "zh": "适合电子、电气、通信、嵌入式、测试和基础设施相关实习。",
+        "ms": "Sesuai untuk elektronik, elektrik, telekomunikasi, sistem terbenam, ujian dan infrastruktur."
+      },
+      "track_ids": [
+        "electrical_electronic",
+        "engineering",
+        "quality_manufacturing",
+        "network_support"
+      ]
+    },
+    "mechanical_mechatronics": {
+      "display_text": {
+        "en": "Mechanical / Mechatronics Engineering",
+        "zh": "机械 / 机电工程",
+        "ms": "Kejuruteraan Mekanikal / Mekatronik"
+      },
+      "description": {
+        "en": "Suitable for mechanical design, manufacturing, maintenance, automation, quality, and production internships.",
+        "zh": "适合机械设计、制造、维护、自动化、质量和生产相关实习。",
+        "ms": "Sesuai untuk reka bentuk mekanikal, pembuatan, penyelenggaraan, automasi, kualiti dan pengeluaran."
+      },
+      "track_ids": [
+        "mechanical_manufacturing",
+        "quality_manufacturing",
+        "engineering",
+        "operations_management"
+      ]
+    },
+    "civil_architecture_qs": {
+      "display_text": {
+        "en": "Civil Engineering / Architecture / Quantity Surveying",
+        "zh": "土木工程 / 建筑 / 工料测量",
+        "ms": "Kejuruteraan Awam / Seni Bina / Ukur Bahan"
+      },
+      "description": {
+        "en": "Suitable for construction, site, design, quantity surveying, project coordination, and built environment internships.",
+        "zh": "适合施工、现场、设计、工料测量、项目协调和建筑环境相关实习。",
+        "ms": "Sesuai untuk pembinaan, tapak, reka bentuk, ukur bahan, koordinasi projek dan alam bina."
+      },
+      "track_ids": [
+        "civil_built_environment",
+        "project_coordination",
+        "quality_manufacturing",
+        "environmental_sustainability"
+      ]
+    },
+    "health_sciences_biomedical": {
+      "display_text": {
+        "en": "Health Sciences / Biomedical / Pharmacy",
+        "zh": "健康科学 / 生物医学 / 药剂",
+        "ms": "Sains Kesihatan / Bioperubatan / Farmasi"
+      },
+      "description": {
+        "en": "Suitable for healthcare administration, clinical research support, laboratory, public health, and biomedical internships.",
+        "zh": "适合医疗行政、临床研究支持、实验室、公共卫生和生物医学相关实习。",
+        "ms": "Sesuai untuk pentadbiran kesihatan, sokongan penyelidikan klinikal, makmal, kesihatan awam dan bioperubatan."
+      },
+      "track_ids": [
+        "healthcare_admin",
+        "clinical_research",
+        "lab_research",
+        "public_admin"
+      ]
+    },
+    "life_environmental_science": {
+      "display_text": {
+        "en": "Life Science / Environmental Science",
+        "zh": "生命科学 / 环境科学",
+        "ms": "Sains Hayat / Sains Alam Sekitar"
+      },
+      "description": {
+        "en": "Suitable for laboratory, research, environmental, sustainability, quality, and agriculture/food science internships.",
+        "zh": "适合实验室、研究、环境、可持续发展、质量和农业/食品科学相关实习。",
+        "ms": "Sesuai untuk makmal, penyelidikan, alam sekitar, kelestarian, kualiti dan sains pertanian/makanan."
+      },
+      "track_ids": [
+        "lab_research",
+        "environmental_sustainability",
+        "agriculture_food",
+        "quality_manufacturing"
+      ]
+    },
+    "hospitality_tourism": {
+      "display_text": {
+        "en": "Hospitality / Tourism / Food Service",
+        "zh": "酒店管理 / 旅游 / 餐饮服务",
+        "ms": "Hospitaliti / Pelancongan / Perkhidmatan Makanan"
+      },
+      "description": {
+        "en": "Suitable for hotel operations, tourism, guest services, events, food service, and customer success internships.",
+        "zh": "适合酒店运营、旅游、宾客服务、活动、餐饮服务和客户成功相关实习。",
+        "ms": "Sesuai untuk operasi hotel, pelancongan, perkhidmatan tetamu, acara, makanan dan kejayaan pelanggan."
+      },
+      "track_ids": [
+        "hospitality_tourism",
+        "event_management",
+        "customer_success",
+        "operations_management"
+      ]
+    },
+    "logistics_supply_chain": {
+      "display_text": {
+        "en": "Logistics / Supply Chain / Transport",
+        "zh": "物流 / 供应链 / 运输",
+        "ms": "Logistik / Rantaian Bekalan / Pengangkutan"
+      },
+      "description": {
+        "en": "Suitable for logistics, procurement, warehousing, transportation, operations, and supply chain analysis internships.",
+        "zh": "适合物流、采购、仓储、运输、运营和供应链分析相关实习。",
+        "ms": "Sesuai untuk logistik, perolehan, gudang, pengangkutan, operasi dan analisis rantaian bekalan."
+      },
+      "track_ids": [
+        "logistics_supply_chain",
+        "procurement",
+        "operations_management",
+        "data_analysis"
+      ]
+    },
+    "agriculture_food_science": {
+      "display_text": {
+        "en": "Agriculture / Food Science / Veterinary",
+        "zh": "农业 / 食品科学 / 兽医",
+        "ms": "Pertanian / Sains Makanan / Veterinar"
+      },
+      "description": {
+        "en": "Suitable for agriculture, food science, lab, quality assurance, sustainability, and field operations internships.",
+        "zh": "适合农业、食品科学、实验室、质量保证、可持续发展和现场运营相关实习。",
+        "ms": "Sesuai untuk pertanian, sains makanan, makmal, jaminan kualiti, kelestarian dan operasi lapangan."
+      },
+      "track_ids": [
+        "agriculture_food",
+        "lab_research",
+        "quality_manufacturing",
+        "environmental_sustainability"
+      ]
+    },
+    "language_linguistics": {
+      "display_text": {
+        "en": "Language / Linguistics / Translation",
+        "zh": "语言 / 语言学 / 翻译",
+        "ms": "Bahasa / Linguistik / Terjemahan"
+      },
+      "description": {
+        "en": "Suitable for translation, content, teaching support, communication, localization, and editorial internships.",
+        "zh": "适合翻译、内容、教学支持、传播、本地化和编辑相关实习。",
+        "ms": "Sesuai untuk terjemahan, kandungan, sokongan pengajaran, komunikasi, lokalisasi dan editorial."
+      },
+      "track_ids": [
+        "translation_content",
+        "content_media",
+        "education_training",
+        "public_relations"
+      ]
+    },
+    "sports_science": {
+      "display_text": {
+        "en": "Sports Science / Recreation",
+        "zh": "运动科学 / 休闲管理",
+        "ms": "Sains Sukan / Rekreasi"
+      },
+      "description": {
+        "en": "Suitable for sports coaching support, fitness, recreation management, events, wellness, and community program internships.",
+        "zh": "适合运动教练支持、健身、休闲管理、活动、健康促进和社区项目相关实习。",
+        "ms": "Sesuai untuk sokongan jurulatih, kecergasan, rekreasi, acara, kesejahteraan dan program komuniti."
+      },
+      "track_ids": [
+        "sports_fitness",
+        "event_management",
+        "healthcare_admin",
+        "psychology_human_services"
+      ]
+    }
+  },
+  "role_tracks": {
+    "software_engineering": {
+      "display_text": {
+        "en": "Software Engineering",
+        "zh": "软件工程方向",
+        "ms": "Kejuruteraan Perisian"
+      },
+      "matching_facts": [
+        "F3",
+        "F5",
+        "F13",
+        "F29",
+        "F30",
+        "F32"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Junior Programming Intern",
+          "Software QA Intern"
+        ],
+        "medium": [
+          "Software Developer Intern",
+          "Backend Developer Intern"
+        ],
+        "high": [
+          "Software Engineering Intern",
+          "Full Stack Developer Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with junior programming or QA roles while building stronger project evidence.",
+        "medium": "Apply for developer internships that match your project stack and programming basics.",
+        "high": "You can target more competitive software engineering internships and explain project trade-offs."
+      },
+      "source_ids": [
+        "bls_software_developers",
+        "onet_software_developers"
+      ]
+    },
+    "web_development": {
+      "display_text": {
+        "en": "Web Development",
+        "zh": "网页 / 前端开发方向",
+        "ms": "Pembangunan Web"
+      },
+      "matching_facts": [
+        "F3",
+        "F4",
+        "F5",
+        "F25",
+        "F28",
+        "F30"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Web Content Assistant Intern",
+          "Front-end Assistant Intern"
+        ],
+        "medium": [
+          "Front-end Developer Intern",
+          "Web Developer Intern"
+        ],
+        "high": [
+          "Web Developer Intern",
+          "UI Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Use small web tasks to build portfolio evidence before applying widely.",
+        "medium": "Apply to front-end or web internships and show GitHub/README proof.",
+        "high": "Target web roles that expect deployed demos, usability awareness, and clear project explanation."
+      },
+      "source_ids": [
+        "bls_web_developers"
+      ]
+    },
+    "data_analysis": {
+      "display_text": {
+        "en": "Data Analysis",
+        "zh": "数据分析方向",
+        "ms": "Analisis Data"
+      },
+      "matching_facts": [
+        "F5",
+        "F6",
+        "F29",
+        "F30",
+        "F31",
+        "F32"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Data Entry / Reporting Intern",
+          "Junior Data Support Intern"
+        ],
+        "medium": [
+          "Data Analyst Intern",
+          "Business Intelligence Intern"
+        ],
+        "high": [
+          "Data Science Intern",
+          "Analytics Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with reporting or data support roles while improving SQL/Python and project explanation.",
+        "medium": "Apply for data analyst roles that require spreadsheets, SQL, Python, and clear reporting.",
+        "high": "You can target data science or analytics engineering internships with stronger project evidence."
+      },
+      "source_ids": [
+        "bls_data_scientists",
+        "onet_data_scientists",
+        "umich_data_science"
+      ]
+    },
+    "machine_learning": {
+      "display_text": {
+        "en": "AI / Machine Learning",
+        "zh": "AI / 机器学习方向",
+        "ms": "AI / Pembelajaran Mesin"
+      },
+      "matching_facts": [
+        "F3",
+        "F5",
+        "F6",
+        "F13",
+        "F29",
+        "F31",
+        "F32"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Data Preparation Intern",
+          "AI Project Assistant Intern"
+        ],
+        "medium": [
+          "AI/ML Project Intern",
+          "Data Science Intern"
+        ],
+        "high": [
+          "Machine Learning Intern",
+          "AI Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Build a simple ML/data project first and learn to explain the model goal and result.",
+        "medium": "Apply for AI/ML support roles when you can show a working project and basic concepts.",
+        "high": "Target AI engineering or ML internship roles that expect coding, data, and model explanation."
+      },
+      "source_ids": [
+        "bls_data_scientists",
+        "onet_data_scientists",
+        "umich_data_science"
+      ]
+    },
+    "cybersecurity": {
+      "display_text": {
+        "en": "Cybersecurity",
+        "zh": "网络安全方向",
+        "ms": "Keselamatan Siber"
+      },
+      "matching_facts": [
+        "F5",
+        "F29",
+        "F30",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "IT Support Intern",
+          "Security Operations Assistant Intern"
+        ],
+        "medium": [
+          "Cybersecurity Intern",
+          "SOC Analyst Intern"
+        ],
+        "high": [
+          "Information Security Analyst Intern",
+          "Security Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Begin with IT support or security operations assistant roles while strengthening technical fundamentals.",
+        "medium": "Apply for SOC or cybersecurity internships if you can discuss basic security practices and tools.",
+        "high": "Target security analyst internships that require monitoring, vulnerability awareness, and clear reporting."
+      },
+      "source_ids": [
+        "bls_information_security",
+        "onet_information_security"
+      ]
+    },
+    "systems_analysis": {
+      "display_text": {
+        "en": "Systems Analysis",
+        "zh": "系统分析方向",
+        "ms": "Analisis Sistem"
+      },
+      "matching_facts": [
+        "F5",
+        "F9",
+        "F14",
+        "F30",
+        "F37",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "IT Documentation Intern",
+          "Business Systems Assistant Intern"
+        ],
+        "medium": [
+          "Systems Analyst Intern",
+          "IT Analyst Intern"
+        ],
+        "high": [
+          "Business Technology Analyst Intern",
+          "Systems Analyst Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with documentation or systems assistant tasks while learning job requirements.",
+        "medium": "Apply for IT analyst internships that need communication plus technical basics.",
+        "high": "Target systems analyst internships where you can connect business needs and IT solutions."
+      },
+      "source_ids": [
+        "bls_systems_analysts",
+        "ku_information_systems",
+        "wisconsin_information_systems"
+      ]
+    },
+    "business_analysis": {
+      "display_text": {
+        "en": "Business Analysis / Product Analysis",
+        "zh": "业务分析 / 产品分析方向",
+        "ms": "Analisis Bisnes / Produk"
+      },
+      "matching_facts": [
+        "F9",
+        "F14",
+        "F30",
+        "F32",
+        "F37",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Operations Reporting Intern",
+          "Business Support Intern"
+        ],
+        "medium": [
+          "Business Analyst Intern",
+          "Product Analyst Intern"
+        ],
+        "high": [
+          "Business Intelligence Intern",
+          "Product Analyst Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Use reporting/support roles to build business context and communication evidence.",
+        "medium": "Apply for business analyst roles when you can compare job descriptions and explain requirements.",
+        "high": "Target BI/product analyst internships that expect structured thinking and stakeholder communication."
+      },
+      "source_ids": [
+        "tamu_mis",
+        "wisconsin_information_systems",
+        "umich_data_science"
+      ]
+    },
+    "database": {
+      "display_text": {
+        "en": "Database / Data Engineering",
+        "zh": "数据库 / 数据工程方向",
+        "ms": "Pangkalan Data / Kejuruteraan Data"
+      },
+      "matching_facts": [
+        "F5",
+        "F29",
+        "F30",
+        "F31",
+        "F32"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Database Support Intern",
+          "SQL Reporting Intern"
+        ],
+        "medium": [
+          "Database Administrator Intern",
+          "SQL/Data Intern"
+        ],
+        "high": [
+          "Database Engineer Intern",
+          "Data Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Build SQL/database basics before aiming for data engineering roles.",
+        "medium": "Apply to SQL/data internships where database basics are enough for entry-level tasks.",
+        "high": "Target data engineering or database roles that expect stronger SQL and system understanding."
+      },
+      "source_ids": [
+        "bls_database",
+        "ku_information_systems",
+        "wisconsin_information_systems"
+      ]
+    },
+    "qa_testing": {
+      "display_text": {
+        "en": "Software Testing / QA",
+        "zh": "软件测试 / QA 方向",
+        "ms": "Ujian Perisian / QA"
+      },
+      "matching_facts": [
+        "F3",
+        "F5",
+        "F29",
+        "F30",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Manual QA Tester Intern",
+          "Software QA Intern"
+        ],
+        "medium": [
+          "QA Tester Intern",
+          "QA Automation Intern"
+        ],
+        "high": [
+          "Software QA Engineer Intern",
+          "Test Automation Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "QA roles can be a practical entry point while you improve programming and project depth.",
+        "medium": "Apply to QA internships and show basic testing logic, Git, and issue reporting.",
+        "high": "Target QA automation roles if you can code tests and explain software behavior."
+      },
+      "source_ids": [
+        "bls_software_developers"
+      ]
+    },
+    "it_support": {
+      "display_text": {
+        "en": "IT Support / IT Operations",
+        "zh": "IT 支持 / 运维方向",
+        "ms": "Sokongan IT / Operasi IT"
+      },
+      "matching_facts": [
+        "F5",
+        "F29",
+        "F30",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "IT Support Intern",
+          "Helpdesk Intern"
+        ],
+        "medium": [
+          "Technical Support Intern",
+          "IT Operations Intern"
+        ],
+        "high": [
+          "IT Infrastructure Intern",
+          "Cloud Support Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "IT support is suitable as an early internship target while building technical foundation.",
+        "medium": "Apply for technical support or IT operations internships and highlight communication skills.",
+        "high": "Target infrastructure or cloud support roles if you also have projects and strong fundamentals."
+      },
+      "source_ids": [
+        "bls_computer_it",
+        "ku_information_systems"
+      ]
+    },
+    "network_support": {
+      "display_text": {
+        "en": "Network / Infrastructure",
+        "zh": "网络 / 基础设施方向",
+        "ms": "Rangkaian / Infrastruktur"
+      },
+      "matching_facts": [
+        "F5",
+        "F29",
+        "F30",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Network Support Assistant Intern",
+          "IT Support Intern"
+        ],
+        "medium": [
+          "Network Support Intern",
+          "IT Infrastructure Intern"
+        ],
+        "high": [
+          "Network Engineering Intern",
+          "Cloud Infrastructure Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with support roles and build networking fundamentals gradually.",
+        "medium": "Apply for network support roles if you can explain troubleshooting and basic systems.",
+        "high": "Target infrastructure roles that expect stronger technical foundation and teamwork."
+      },
+      "source_ids": [
+        "bls_computer_it",
+        "ku_information_systems"
+      ]
+    },
+    "ui_ux": {
+      "display_text": {
+        "en": "UI/UX and Digital Design",
+        "zh": "UI/UX 与数字设计方向",
+        "ms": "UI/UX dan Reka Bentuk Digital"
+      },
+      "matching_facts": [
+        "F3",
+        "F4",
+        "F25",
+        "F27",
+        "F28",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "UI Content Assistant Intern",
+          "Digital Design Assistant Intern"
+        ],
+        "medium": [
+          "UI/UX Design Intern",
+          "Digital Designer Intern"
+        ],
+        "high": [
+          "Product Design Intern",
+          "Front-end UI Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Prepare a small portfolio or design/project showcase before applying widely.",
+        "medium": "Apply to UI/UX roles when your portfolio explains goals, users, and design decisions.",
+        "high": "Target product design or front-end UI internships with a polished portfolio and demo."
+      },
+      "source_ids": [
+        "bls_web_developers"
+      ]
+    },
+    "accounting_audit": {
+      "display_text": {
+        "en": "Accounting / Audit / Tax",
+        "zh": "会计 / 审计 / 税务",
+        "ms": "Perakaunan / Audit / Cukai"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42",
+        "F23"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Accounting Assistant Intern",
+          "Bookkeeping Intern"
+        ],
+        "medium": [
+          "Accounting Intern",
+          "Audit Intern"
+        ],
+        "high": [
+          "Tax Intern",
+          "Assurance Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Accuracy, documents, and role-specific preparation matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Accuracy, documents, and role-specific preparation matter.",
+        "high": "Target more competitive or analyst-style internships. Accuracy, documents, and role-specific preparation matter."
+      },
+      "source_ids": [
+        "bls_business_financial",
+        "umaine_major_exploration",
+        "mynext"
+      ]
+    },
+    "finance_banking": {
+      "display_text": {
+        "en": "Finance / Banking / Risk",
+        "zh": "金融 / 银行 / 风险",
+        "ms": "Kewangan / Perbankan / Risiko"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Finance Admin Intern",
+          "Banking Operations Intern"
+        ],
+        "medium": [
+          "Finance Intern",
+          "Banking Intern"
+        ],
+        "high": [
+          "Financial Analyst Intern",
+          "Risk Analyst Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Business awareness, reporting, and professional materials are important.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Business awareness, reporting, and professional materials are important.",
+        "high": "Target more competitive or analyst-style internships. Business awareness, reporting, and professional materials are important."
+      },
+      "source_ids": [
+        "bls_business_financial",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "marketing_digital": {
+      "display_text": {
+        "en": "Marketing / Digital Marketing",
+        "zh": "市场营销 / 数字营销",
+        "ms": "Pemasaran / Pemasaran Digital"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F8",
+        "F9",
+        "F11",
+        "F12",
+        "F14",
+        "F22",
+        "F32",
+        "F41",
+        "F25"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Social Media Assistant Intern",
+          "Marketing Assistant Intern"
+        ],
+        "medium": [
+          "Digital Marketing Intern",
+          "Marketing Intern"
+        ],
+        "high": [
+          "Brand Strategy Intern",
+          "Performance Marketing Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Portfolio, campaign examples, and communication evidence improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Portfolio, campaign examples, and communication evidence improve fit.",
+        "high": "Target more competitive or analyst-style internships. Portfolio, campaign examples, and communication evidence improve fit."
+      },
+      "source_ids": [
+        "bls_management",
+        "bls_business_financial",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "public_relations": {
+      "display_text": {
+        "en": "Public Relations / Corporate Communication",
+        "zh": "公共关系 / 企业传播",
+        "ms": "Perhubungan Awam / Komunikasi Korporat"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F8",
+        "F9",
+        "F11",
+        "F12",
+        "F14",
+        "F22",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Communications Assistant Intern",
+          "PR Support Intern"
+        ],
+        "medium": [
+          "Public Relations Intern",
+          "Corporate Communications Intern"
+        ],
+        "high": [
+          "Media Relations Intern",
+          "Strategic Communications Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Writing samples and stakeholder communication evidence are useful.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Writing samples and stakeholder communication evidence are useful.",
+        "high": "Target more competitive or analyst-style internships. Writing samples and stakeholder communication evidence are useful."
+      },
+      "source_ids": [
+        "bls_management",
+        "bls_ooh_home",
+        "towson_major_resources"
+      ]
+    },
+    "content_media": {
+      "display_text": {
+        "en": "Content / Social Media / Creative Production",
+        "zh": "内容 / 社交媒体 / 创意制作",
+        "ms": "Kandungan / Media Sosial / Produksi Kreatif"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F8",
+        "F9",
+        "F11",
+        "F12",
+        "F14",
+        "F22",
+        "F32",
+        "F41",
+        "F4",
+        "F27"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Content Assistant Intern",
+          "Social Media Assistant Intern"
+        ],
+        "medium": [
+          "Content Marketing Intern",
+          "Social Media Intern"
+        ],
+        "high": [
+          "Copywriting Intern",
+          "Creative Strategy Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. A portfolio or sample work helps the system recommend stronger creative roles.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. A portfolio or sample work helps the system recommend stronger creative roles.",
+        "high": "Target more competitive or analyst-style internships. A portfolio or sample work helps the system recommend stronger creative roles."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "towson_major_resources",
+        "mynext"
+      ]
+    },
+    "market_research": {
+      "display_text": {
+        "en": "Market Research / Insights",
+        "zh": "市场研究 / 消费者洞察",
+        "ms": "Penyelidikan Pasaran / Insight"
+      },
+      "matching_facts": [
+        "F1",
+        "F5",
+        "F9",
+        "F14",
+        "F30",
+        "F32",
+        "F37",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Survey Assistant Intern",
+          "Research Support Intern"
+        ],
+        "medium": [
+          "Market Research Intern",
+          "Consumer Insights Intern"
+        ],
+        "high": [
+          "Research Analyst Intern",
+          "Market Intelligence Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Research, analysis, and reporting evidence affect the fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Research, analysis, and reporting evidence affect the fit.",
+        "high": "Target more competitive or analyst-style internships. Research, analysis, and reporting evidence affect the fit."
+      },
+      "source_ids": [
+        "bls_business_financial",
+        "umich_psychology",
+        "georgetown_psychology"
+      ]
+    },
+    "human_resources": {
+      "display_text": {
+        "en": "Human Resources / Talent",
+        "zh": "人力资源 / 人才招聘",
+        "ms": "Sumber Manusia / Bakat"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "HR Admin Intern",
+          "Recruitment Assistant Intern"
+        ],
+        "medium": [
+          "Human Resources Intern",
+          "Talent Acquisition Intern"
+        ],
+        "high": [
+          "People Operations Intern",
+          "Learning and Development Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Communication, teamwork, and professionalism are key signals.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Communication, teamwork, and professionalism are key signals.",
+        "high": "Target more competitive or analyst-style internships. Communication, teamwork, and professionalism are key signals."
+      },
+      "source_ids": [
+        "bls_business_financial",
+        "bls_management",
+        "umich_psychology"
+      ]
+    },
+    "business_operations": {
+      "display_text": {
+        "en": "Business Operations / Administration",
+        "zh": "业务运营 / 行政管理",
+        "ms": "Operasi Bisnes / Pentadbiran"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Business Support Intern",
+          "Administrative Intern"
+        ],
+        "medium": [
+          "Operations Intern",
+          "Management Trainee Intern"
+        ],
+        "high": [
+          "Strategy and Operations Intern",
+          "Business Operations Analyst Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Task tracking and follow-up improve readiness for operations roles.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Task tracking and follow-up improve readiness for operations roles.",
+        "high": "Target more competitive or analyst-style internships. Task tracking and follow-up improve readiness for operations roles."
+      },
+      "source_ids": [
+        "bls_management",
+        "ku_careers"
+      ]
+    },
+    "project_coordination": {
+      "display_text": {
+        "en": "Project Coordination",
+        "zh": "项目协调",
+        "ms": "Koordinasi Projek"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F13",
+        "F14",
+        "F25",
+        "F26",
+        "F32",
+        "F41",
+        "F39",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Project Admin Intern",
+          "Project Support Intern"
+        ],
+        "medium": [
+          "Project Coordinator Intern",
+          "PMO Intern"
+        ],
+        "high": [
+          "Junior Project Management Intern",
+          "Technical Project Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Past project responsibility and tracking evidence help.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Past project responsibility and tracking evidence help.",
+        "high": "Target more competitive or analyst-style internships. Past project responsibility and tracking evidence help."
+      },
+      "source_ids": [
+        "bls_management",
+        "gradmalaysia",
+        "mynext"
+      ]
+    },
+    "legal": {
+      "display_text": {
+        "en": "Legal / Compliance",
+        "zh": "法律 / 合规",
+        "ms": "Undang-undang / Pematuhan"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42",
+        "F23"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Legal Admin Intern",
+          "Compliance Support Intern"
+        ],
+        "medium": [
+          "Legal Intern",
+          "Paralegal Intern"
+        ],
+        "high": [
+          "Legal Research Intern",
+          "Compliance Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Professional documents, writing, and careful role research are important.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Professional documents, writing, and careful role research are important.",
+        "high": "Target more competitive or analyst-style internships. Professional documents, writing, and careful role research are important."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "umaine_major_exploration",
+        "mynext"
+      ]
+    },
+    "policy_research": {
+      "display_text": {
+        "en": "Policy / Research / International Relations",
+        "zh": "政策 / 研究 / 国际关系",
+        "ms": "Dasar / Penyelidikan / Hubungan Antarabangsa"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Policy Research Assistant Intern",
+          "NGO Program Assistant Intern"
+        ],
+        "medium": [
+          "Public Policy Intern",
+          "Research Intern"
+        ],
+        "high": [
+          "Policy Analyst Intern",
+          "International Relations Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Research synthesis and stakeholder communication improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Research synthesis and stakeholder communication improve fit.",
+        "high": "Target more competitive or analyst-style internships. Research synthesis and stakeholder communication improve fit."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "ku_careers",
+        "mynext"
+      ]
+    },
+    "public_admin": {
+      "display_text": {
+        "en": "Public Administration / NGO / Community Programs",
+        "zh": "公共行政 / NGO / 社区项目",
+        "ms": "Pentadbiran Awam / NGO / Program Komuniti"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Program Assistant Intern",
+          "Administrative Support Intern"
+        ],
+        "medium": [
+          "Public Administration Intern",
+          "NGO Program Intern"
+        ],
+        "high": [
+          "Community Program Coordinator Intern",
+          "Public Service Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Service experience and teamwork evidence are useful.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Service experience and teamwork evidence are useful.",
+        "high": "Target more competitive or analyst-style internships. Service experience and teamwork evidence are useful."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "ku_careers",
+        "mynext"
+      ]
+    },
+    "psychology_human_services": {
+      "display_text": {
+        "en": "Psychology / Human Services",
+        "zh": "心理学 / 社会服务",
+        "ms": "Psikologi / Perkhidmatan Manusia"
+      },
+      "matching_facts": [
+        "F1",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F34",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Community Service Assistant Intern",
+          "Volunteer Program Intern"
+        ],
+        "medium": [
+          "Human Services Intern",
+          "Youth Program Intern"
+        ],
+        "high": [
+          "Psychology Research Assistant Intern",
+          "Student Affairs Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. The system recommends supervised support roles; clinical duties may require further qualifications.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. The system recommends supervised support roles; clinical duties may require further qualifications.",
+        "high": "Target more competitive or analyst-style internships. The system recommends supervised support roles; clinical duties may require further qualifications."
+      },
+      "source_ids": [
+        "umich_psychology",
+        "georgetown_psychology",
+        "bls_ooh_home"
+      ]
+    },
+    "education_training": {
+      "display_text": {
+        "en": "Education / Training",
+        "zh": "教育 / 培训",
+        "ms": "Pendidikan / Latihan"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F8",
+        "F9",
+        "F11",
+        "F12",
+        "F14",
+        "F22",
+        "F32",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Teaching Assistant Intern",
+          "Tutor Intern"
+        ],
+        "medium": [
+          "Education Intern",
+          "TESL Teaching Assistant Intern"
+        ],
+        "high": [
+          "Curriculum Development Intern",
+          "Learning and Development Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Presentation, communication, and supervised teaching evidence matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Presentation, communication, and supervised teaching evidence matter.",
+        "high": "Target more competitive or analyst-style internships. Presentation, communication, and supervised teaching evidence matter."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext",
+        "towson_major_resources"
+      ]
+    },
+    "journalism_media": {
+      "display_text": {
+        "en": "Journalism / Media Production",
+        "zh": "新闻 / 媒体制作",
+        "ms": "Kewartawanan / Produksi Media"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F8",
+        "F9",
+        "F11",
+        "F12",
+        "F14",
+        "F22",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Editorial Assistant Intern",
+          "Media Production Assistant Intern"
+        ],
+        "medium": [
+          "Journalism Intern",
+          "Broadcast Production Intern"
+        ],
+        "high": [
+          "Multimedia Reporter Intern",
+          "Digital News Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Writing, media samples, and deadline readiness improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Writing, media samples, and deadline readiness improve fit.",
+        "high": "Target more competitive or analyst-style internships. Writing, media samples, and deadline readiness improve fit."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "towson_major_resources",
+        "mynext"
+      ]
+    },
+    "graphic_design": {
+      "display_text": {
+        "en": "Graphic Design / Multimedia Design",
+        "zh": "平面设计 / 多媒体设计",
+        "ms": "Reka Bentuk Grafik / Multimedia"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F4",
+        "F9",
+        "F12",
+        "F14",
+        "F25",
+        "F27",
+        "F28",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Design Assistant Intern",
+          "Creative Production Assistant Intern"
+        ],
+        "medium": [
+          "Graphic Design Intern",
+          "Multimedia Designer Intern"
+        ],
+        "high": [
+          "Brand Design Intern",
+          "Motion Design Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. A portfolio or project showcase is especially important.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. A portfolio or project showcase is especially important.",
+        "high": "Target more competitive or analyst-style internships. A portfolio or project showcase is especially important."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "bls_web_developers",
+        "mynext"
+      ]
+    },
+    "engineering": {
+      "display_text": {
+        "en": "General Engineering",
+        "zh": "通用工程",
+        "ms": "Kejuruteraan Umum"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F13",
+        "F14",
+        "F25",
+        "F26",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Engineering Assistant Intern",
+          "Technical Documentation Intern"
+        ],
+        "medium": [
+          "Engineering Intern",
+          "Production Engineering Intern"
+        ],
+        "high": [
+          "Engineering Intern",
+          "R&D Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Project explanation and implementation evidence improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Project explanation and implementation evidence improve fit.",
+        "high": "Target more competitive or analyst-style internships. Project explanation and implementation evidence improve fit."
+      },
+      "source_ids": [
+        "bls_architecture_engineering",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "electrical_electronic": {
+      "display_text": {
+        "en": "Electrical / Electronic / Telecommunications",
+        "zh": "电气 / 电子 / 通信",
+        "ms": "Elektrik / Elektronik / Telekomunikasi"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F13",
+        "F14",
+        "F25",
+        "F26",
+        "F32",
+        "F41",
+        "F5",
+        "F30"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Electronics Lab Assistant Intern",
+          "Technical Support Intern"
+        ],
+        "medium": [
+          "Electrical Engineering Intern",
+          "Electronics Engineering Intern"
+        ],
+        "high": [
+          "Telecommunications Engineering Intern",
+          "Embedded Systems Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Technical fundamentals and implementation explanation matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Technical fundamentals and implementation explanation matter.",
+        "high": "Target more competitive or analyst-style internships. Technical fundamentals and implementation explanation matter."
+      },
+      "source_ids": [
+        "bls_architecture_engineering",
+        "mynext"
+      ]
+    },
+    "mechanical_manufacturing": {
+      "display_text": {
+        "en": "Mechanical / Manufacturing",
+        "zh": "机械 / 制造",
+        "ms": "Mekanikal / Pembuatan"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F13",
+        "F14",
+        "F25",
+        "F26",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Manufacturing Assistant Intern",
+          "Maintenance Support Intern"
+        ],
+        "medium": [
+          "Mechanical Engineering Intern",
+          "Manufacturing Intern"
+        ],
+        "high": [
+          "Process Engineering Intern",
+          "Automation Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Manufacturing process and project evidence improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Manufacturing process and project evidence improve fit.",
+        "high": "Target more competitive or analyst-style internships. Manufacturing process and project evidence improve fit."
+      },
+      "source_ids": [
+        "bls_architecture_engineering",
+        "mynext"
+      ]
+    },
+    "civil_built_environment": {
+      "display_text": {
+        "en": "Civil / Architecture / Built Environment",
+        "zh": "土木 / 建筑 / 建成环境",
+        "ms": "Awam / Seni Bina / Alam Bina"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F13",
+        "F14",
+        "F25",
+        "F26",
+        "F32",
+        "F41",
+        "F22"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Site Assistant Intern",
+          "Quantity Surveying Assistant Intern"
+        ],
+        "medium": [
+          "Civil Engineering Intern",
+          "Architecture Intern"
+        ],
+        "high": [
+          "Construction Project Intern",
+          "Built Environment Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Site/project documentation and communication evidence are useful.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Site/project documentation and communication evidence are useful.",
+        "high": "Target more competitive or analyst-style internships. Site/project documentation and communication evidence are useful."
+      },
+      "source_ids": [
+        "bls_architecture_engineering",
+        "mynext"
+      ]
+    },
+    "quality_manufacturing": {
+      "display_text": {
+        "en": "Quality / Manufacturing Operations",
+        "zh": "质量 / 制造运营",
+        "ms": "Kualiti / Operasi Pembuatan"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42",
+        "F25"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Quality Assistant Intern",
+          "Production Support Intern"
+        ],
+        "medium": [
+          "Quality Assurance Intern",
+          "Manufacturing Operations Intern"
+        ],
+        "high": [
+          "Process Improvement Intern",
+          "Quality Engineering Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Accuracy, process awareness, and tracking evidence matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Accuracy, process awareness, and tracking evidence matter.",
+        "high": "Target more competitive or analyst-style internships. Accuracy, process awareness, and tracking evidence matter."
+      },
+      "source_ids": [
+        "bls_management",
+        "bls_architecture_engineering",
+        "gradmalaysia"
+      ]
+    },
+    "operations_management": {
+      "display_text": {
+        "en": "Operations Management",
+        "zh": "运营管理",
+        "ms": "Pengurusan Operasi"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Operations Support Intern",
+          "Admin Operations Intern"
+        ],
+        "medium": [
+          "Operations Intern",
+          "Business Operations Intern"
+        ],
+        "high": [
+          "Operations Analyst Intern",
+          "Process Improvement Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Problem solving and follow-up discipline improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Problem solving and follow-up discipline improve fit.",
+        "high": "Target more competitive or analyst-style internships. Problem solving and follow-up discipline improve fit."
+      },
+      "source_ids": [
+        "bls_management",
+        "ku_careers",
+        "gradmalaysia"
+      ]
+    },
+    "healthcare_admin": {
+      "display_text": {
+        "en": "Healthcare Administration / Public Health",
+        "zh": "医疗行政 / 公共卫生",
+        "ms": "Pentadbiran Kesihatan / Kesihatan Awam"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42",
+        "F23"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Clinic Admin Intern",
+          "Health Program Assistant Intern"
+        ],
+        "medium": [
+          "Healthcare Administration Intern",
+          "Public Health Intern"
+        ],
+        "high": [
+          "Health Services Intern",
+          "Community Health Program Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Choose supervised roles that match your qualification level.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Choose supervised roles that match your qualification level.",
+        "high": "Target more competitive or analyst-style internships. Choose supervised roles that match your qualification level."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext"
+      ]
+    },
+    "clinical_research": {
+      "display_text": {
+        "en": "Clinical / Biomedical Research Support",
+        "zh": "临床 / 生物医学研究支持",
+        "ms": "Sokongan Penyelidikan Klinikal / Bioperubatan"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F14",
+        "F23",
+        "F25",
+        "F32",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Research Admin Intern",
+          "Clinical Data Support Intern"
+        ],
+        "medium": [
+          "Clinical Research Intern",
+          "Biomedical Research Intern"
+        ],
+        "high": [
+          "Research Assistant Intern",
+          "Clinical Operations Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Research, documentation, and accuracy matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Research, documentation, and accuracy matter.",
+        "high": "Target more competitive or analyst-style internships. Research, documentation, and accuracy matter."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext"
+      ]
+    },
+    "lab_research": {
+      "display_text": {
+        "en": "Laboratory / Scientific Research",
+        "zh": "实验室 / 科学研究",
+        "ms": "Makmal / Penyelidikan Saintifik"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F14",
+        "F23",
+        "F25",
+        "F32",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Lab Assistant Intern",
+          "Research Support Intern"
+        ],
+        "medium": [
+          "Laboratory Intern",
+          "Research Assistant Intern"
+        ],
+        "high": [
+          "R&D Lab Intern",
+          "Scientific Research Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Academic documents and project explanation are important.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Academic documents and project explanation are important.",
+        "high": "Target more competitive or analyst-style internships. Academic documents and project explanation are important."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext"
+      ]
+    },
+    "environmental_sustainability": {
+      "display_text": {
+        "en": "Environmental / Sustainability",
+        "zh": "环境 / 可持续发展",
+        "ms": "Alam Sekitar / Kelestarian"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F14",
+        "F23",
+        "F25",
+        "F32",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Sustainability Assistant Intern",
+          "Environmental Support Intern"
+        ],
+        "medium": [
+          "Environmental Intern",
+          "Sustainability Intern"
+        ],
+        "high": [
+          "ESG Analyst Intern",
+          "Environmental Project Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Research, reporting, and impact communication improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Research, reporting, and impact communication improve fit.",
+        "high": "Target more competitive or analyst-style internships. Research, reporting, and impact communication improve fit."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "hospitality_tourism": {
+      "display_text": {
+        "en": "Hospitality / Tourism",
+        "zh": "酒店 / 旅游",
+        "ms": "Hospitaliti / Pelancongan"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42",
+        "F40"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Guest Services Intern",
+          "Front Office Intern"
+        ],
+        "medium": [
+          "Hotel Operations Intern",
+          "Tourism Intern"
+        ],
+        "high": [
+          "Tourism Management Intern",
+          "Hospitality Operations Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Service experience and communication are key signals.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Service experience and communication are key signals.",
+        "high": "Target more competitive or analyst-style internships. Service experience and communication are key signals."
+      },
+      "source_ids": [
+        "bls_management",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "event_management": {
+      "display_text": {
+        "en": "Event Management",
+        "zh": "活动管理",
+        "ms": "Pengurusan Acara"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F13",
+        "F14",
+        "F25",
+        "F26",
+        "F32",
+        "F41",
+        "F39",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Event Assistant Intern",
+          "Program Support Intern"
+        ],
+        "medium": [
+          "Event Management Intern",
+          "Event Operations Intern"
+        ],
+        "high": [
+          "Event Coordinator Intern",
+          "Partnerships and Events Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Planning, teamwork, and follow-up evidence matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Planning, teamwork, and follow-up evidence matter.",
+        "high": "Target more competitive or analyst-style internships. Planning, teamwork, and follow-up evidence matter."
+      },
+      "source_ids": [
+        "bls_management",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "customer_success": {
+      "display_text": {
+        "en": "Customer Success / Client Service",
+        "zh": "客户成功 / 客户服务",
+        "ms": "Kejayaan Pelanggan / Khidmat Pelanggan"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Customer Service Intern",
+          "Client Support Intern"
+        ],
+        "medium": [
+          "Customer Success Intern",
+          "Client Relations Intern"
+        ],
+        "high": [
+          "Account Management Intern",
+          "Customer Experience Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Professional communication and service experience improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Professional communication and service experience improve fit.",
+        "high": "Target more competitive or analyst-style internships. Professional communication and service experience improve fit."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "ku_careers"
+      ]
+    },
+    "logistics_supply_chain": {
+      "display_text": {
+        "en": "Logistics / Supply Chain",
+        "zh": "物流 / 供应链",
+        "ms": "Logistik / Rantaian Bekalan"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42",
+        "F30"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Warehouse Operations Intern",
+          "Logistics Support Intern"
+        ],
+        "medium": [
+          "Logistics Intern",
+          "Supply Chain Intern"
+        ],
+        "high": [
+          "Supply Chain Analyst Intern",
+          "Logistics Analyst Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Tracking, operations awareness, and data basics improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Tracking, operations awareness, and data basics improve fit.",
+        "high": "Target more competitive or analyst-style internships. Tracking, operations awareness, and data basics improve fit."
+      },
+      "source_ids": [
+        "bls_logisticians",
+        "mynext",
+        "gradmalaysia"
+      ]
+    },
+    "procurement": {
+      "display_text": {
+        "en": "Procurement / Purchasing",
+        "zh": "采购 / 供应商管理",
+        "ms": "Perolehan / Pembelian"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F37",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Procurement Assistant Intern",
+          "Purchasing Support Intern"
+        ],
+        "medium": [
+          "Procurement Intern",
+          "Purchasing Intern"
+        ],
+        "high": [
+          "Strategic Sourcing Intern",
+          "Vendor Management Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Documentation and stakeholder communication improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Documentation and stakeholder communication improve fit.",
+        "high": "Target more competitive or analyst-style internships. Documentation and stakeholder communication improve fit."
+      },
+      "source_ids": [
+        "bls_business_financial",
+        "mynext"
+      ]
+    },
+    "agriculture_food": {
+      "display_text": {
+        "en": "Agriculture / Food Science",
+        "zh": "农业 / 食品科学",
+        "ms": "Pertanian / Sains Makanan"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F9",
+        "F11",
+        "F14",
+        "F23",
+        "F25",
+        "F32",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Farm Operations Assistant Intern",
+          "Food Lab Assistant Intern"
+        ],
+        "medium": [
+          "Agriculture Intern",
+          "Food Science Intern"
+        ],
+        "high": [
+          "Food Quality Intern",
+          "Agricultural Research Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Lab/field evidence and quality awareness improve fit.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Lab/field evidence and quality awareness improve fit.",
+        "high": "Target more competitive or analyst-style internships. Lab/field evidence and quality awareness improve fit."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext"
+      ]
+    },
+    "translation_content": {
+      "display_text": {
+        "en": "Translation / Localization / Language Content",
+        "zh": "翻译 / 本地化 / 语言内容",
+        "ms": "Terjemahan / Lokalisasi / Kandungan Bahasa"
+      },
+      "matching_facts": [
+        "F1",
+        "F3",
+        "F8",
+        "F9",
+        "F11",
+        "F12",
+        "F14",
+        "F22",
+        "F32",
+        "F41"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Translation Assistant Intern",
+          "Language Content Assistant Intern"
+        ],
+        "medium": [
+          "Localization Intern",
+          "Content Writer Intern"
+        ],
+        "high": [
+          "Technical Translation Intern",
+          "Editorial Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Writing or translation samples are important evidence.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Writing or translation samples are important evidence.",
+        "high": "Target more competitive or analyst-style internships. Writing or translation samples are important evidence."
+      },
+      "source_ids": [
+        "bls_ooh_home",
+        "mynext"
+      ]
+    },
+    "sports_fitness": {
+      "display_text": {
+        "en": "Sports / Fitness / Recreation",
+        "zh": "运动 / 健身 / 休闲",
+        "ms": "Sukan / Kecergasan / Rekreasi"
+      },
+      "matching_facts": [
+        "F1",
+        "F2",
+        "F9",
+        "F11",
+        "F14",
+        "F22",
+        "F32",
+        "F39",
+        "F41",
+        "F42"
+      ],
+      "readiness_titles": {
+        "low": [
+          "Sports Program Assistant Intern",
+          "Fitness Center Assistant Intern"
+        ],
+        "medium": [
+          "Sports Science Intern",
+          "Fitness Training Intern"
+        ],
+        "high": [
+          "Recreation Program Intern",
+          "Sports Performance Intern"
+        ]
+      },
+      "fit_notes": {
+        "low": "Start with supervised support roles. Supervised service, planning, and teamwork evidence matter.",
+        "medium": "Apply for standard internship roles when your materials and role research are ready. Supervised service, planning, and teamwork evidence matter.",
+        "high": "Target more competitive or analyst-style internships. Supervised service, planning, and teamwork evidence matter."
+      },
+      "source_ids": [
+        "bls_management",
+        "mynext"
+      ]
+    }
+  },
+  "platforms": [
+    {
+      "name": "LinkedIn Jobs",
+      "url": "https://www.linkedin.com/jobs/",
+      "region": "Global / Malaysia",
+      "best_for": [
+        "networking",
+        "company search",
+        "internship alerts"
+      ],
+      "readiness_fit": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "Search role keywords with 'intern' and turn on job alerts; update LinkedIn before applying.",
+        "zh": "用岗位关键词加 intern 搜索并开启提醒；投递前先完善 LinkedIn。",
+        "ms": "Cari kata kunci peranan bersama 'intern' dan hidupkan amaran kerja; kemas kini LinkedIn sebelum memohon."
+      },
+      "source_id": "linkedin_jobs"
+    },
+    {
+      "name": "JobStreet Malaysia",
+      "url": "https://my.jobstreet.com/internships-jobs",
+      "region": "Malaysia",
+      "best_for": [
+        "Malaysia internships",
+        "ICT classifications",
+        "local employers"
+      ],
+      "readiness_fit": [
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "Use ICT and internship filters, then save searches for your selected role titles.",
+        "zh": "使用 ICT 和 internship 筛选，再保存与你目标岗位相关的搜索。",
+        "ms": "Gunakan penapis ICT dan internship, kemudian simpan carian untuk tajuk peranan sasaran."
+      },
+      "source_id": "jobstreet_internships"
+    },
+    {
+      "name": "Hiredly Internships",
+      "url": "https://my.hiredly.com/internships",
+      "region": "Malaysia",
+      "best_for": [
+        "startup internships",
+        "student applications",
+        "resume upload"
+      ],
+      "readiness_fit": [
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "Upload a prepared resume and search by internship title or company name.",
+        "zh": "上传已准备好的简历，并用实习岗位名称或公司名称搜索。",
+        "ms": "Muat naik resume yang siap dan cari mengikut tajuk latihan industri atau nama syarikat."
+      },
+      "source_id": "hiredly_internships"
+    },
+    {
+      "name": "MyNext by TalentCorp Malaysia",
+      "url": "https://www.mynext.my/",
+      "region": "Malaysia",
+      "best_for": [
+        "structured internships",
+        "career exploration",
+        "student preparation"
+      ],
+      "readiness_fit": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "Use it to explore structured internships and compare internship categories before applying.",
+        "zh": "用于探索结构化实习，并在申请前比较不同实习类别。",
+        "ms": "Gunakan untuk meneroka latihan industri berstruktur dan membandingkan kategori sebelum memohon."
+      },
+      "source_id": "mynext"
+    },
+    {
+      "name": "Prosple Malaysia",
+      "url": "https://my.prosple.com/",
+      "region": "Malaysia",
+      "best_for": [
+        "student internships",
+        "fresh graduate roles",
+        "career advice"
+      ],
+      "readiness_fit": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "Browse IT, data, cyber security, and graduate internship categories; also read CV/interview advice.",
+        "zh": "浏览 IT、数据、网络安全和毕业生实习类别，也可以查看 CV/面试建议。",
+        "ms": "Layari kategori IT, data, keselamatan siber dan latihan graduan; baca juga nasihat CV/temu duga."
+      },
+      "source_id": "prosple_malaysia"
+    },
+    {
+      "name": "Handshake",
+      "url": "https://support.joinhandshake.com/hc/en-us/articles/218693408-Searching-for-Jobs-and-Internships",
+      "region": "University-dependent",
+      "best_for": [
+        "university career portal",
+        "job alerts",
+        "career center postings"
+      ],
+      "readiness_fit": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "If your university provides access, create saved searches and job alerts for your target role.",
+        "zh": "如果学校提供访问权限，可以为目标岗位创建 saved search 和 job alert。",
+        "ms": "Jika universiti menyediakan akses, cipta carian tersimpan dan amaran kerja untuk peranan sasaran."
+      },
+      "source_id": "handshake_search"
+    },
+    {
+      "name": "gradmalaysia",
+      "url": "https://gradmalaysia.com/jobs-internships",
+      "region": "Malaysia",
+      "best_for": [
+        "graduate internships",
+        "business roles",
+        "engineering roles",
+        "broad student opportunities"
+      ],
+      "readiness_fit": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "use_tip": {
+        "en": "Browse jobs and internships by sector such as engineering, business, marketing, and sustainability.",
+        "zh": "按工程、商业、市场、可持续发展等行业浏览 graduate jobs 和 internships。",
+        "ms": "Layari pekerjaan dan latihan mengikut sektor seperti kejuruteraan, bisnes, pemasaran dan kelestarian."
+      },
+      "source_id": "gradmalaysia"
+    }
+  ],
+  "source_notes": {
+    "bls_computer_it": "BLS Computer and Information Technology occupations were used to define broad IT role families.",
+    "bls_software_developers": "BLS Software Developers, QA Analysts, and Testers were used for software and testing role tracks.",
+    "bls_web_developers": "BLS Web Developers and Digital Designers were used for web and UI/digital design role tracks.",
+    "bls_information_security": "BLS Information Security Analysts were used for cybersecurity role tracks.",
+    "bls_systems_analysts": "BLS Computer Systems Analysts were used for systems analyst role tracks.",
+    "bls_database": "BLS Database Administrators and Architects were used for database role tracks.",
+    "bls_data_scientists": "BLS Data Scientists were used for data analysis, data science, and AI/ML role tracks.",
+    "onet_software_developers": "O*NET Software Developers task descriptions were used to identify software development signals.",
+    "onet_data_scientists": "O*NET Data Scientists task descriptions were used to identify analytics, visualization, and ML signals.",
+    "onet_information_security": "O*NET Information Security Analysts task descriptions were used to identify cybersecurity signals.",
+    "ku_information_systems": "University of Kansas Information Systems career paths were used for IS-related tracks.",
+    "tamu_mis": "Texas A&M MIS career ideas were used for business/IT analyst mappings.",
+    "wisconsin_information_systems": "Wisconsin Information Systems career paths were used for business analyst, systems analyst, database, and BI mappings.",
+    "umich_data_science": "University of Michigan Data Science track was used for data science entry-level titles and preparation ideas.",
+    "linkedin_jobs": "LinkedIn Jobs was used as a public job/internship search platform reference.",
+    "jobstreet_internships": "JobStreet Malaysia internships search was used as a Malaysia internship platform reference.",
+    "hiredly_internships": "Hiredly internships page was used as a Malaysia internship platform reference.",
+    "mynext": "MyNext by TalentCorp Malaysia was used as a structured internship and career exploration platform reference.",
+    "prosple_malaysia": "Prosple Malaysia was used as a student internship and fresh graduate platform reference.",
+    "handshake_search": "Handshake job/internship search guidance was used as a university career portal reference.",
+    "bls_business_financial": "BLS Business and Financial occupations were used for accounting, finance, HR, market research, logistics, procurement, and analyst role families.",
+    "bls_architecture_engineering": "BLS Architecture and Engineering occupations were used for engineering, electrical/electronic, mechanical, civil, manufacturing, and built environment role families.",
+    "bls_management": "BLS Management occupations were used for operations, marketing, HR management, hospitality, event, and project coordination role families.",
+    "bls_ooh_home": "BLS OOH occupation groups were used to cover non-IT fields such as media, education, legal, healthcare, science, social service, and arts/design.",
+    "bls_logisticians": "BLS Logisticians were used to support logistics and supply chain role-track mapping.",
+    "umaine_major_exploration": "University of Maine What Can I Do With This Major was used to broaden the major list beyond IT and CS.",
+    "ttu_major_exploration": "Texas Tech University What Can I Do With This Major was used as a broad major-to-career exploration reference.",
+    "towson_major_resources": "Towson Career Resources by Major was used to support broad major categories, internship resources, and sample career titles.",
+    "mtsu_major_guides": "MTSU What Can I Do With A Major In guides were used to support broad university major categories and the idea that major does not rigidly determine career.",
+    "ku_careers": "University of Kansas Careers database was used to show that many careers accept multiple majors and value experience and skills.",
+    "umich_psychology": "University of Michigan Psychology career guide was used for psychology, research, communication, and human services role mapping.",
+    "georgetown_psychology": "Georgetown Psychology major guide was used for psychology-related skills and cross-industry options such as HR, consulting, advertising, business, and marketing.",
+    "gradmalaysia": "gradmalaysia job and internship categories were used for Malaysia-focused broad internship families such as business, engineering, marketing, and sustainability."
+  }
+}

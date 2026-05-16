@@ -23,6 +23,10 @@ def load_references():
     return load_json(DATA_DIR / "references.json")
 
 
+def load_career_paths():
+    return load_json(DATA_DIR / "career_paths.json")
+
+
 def fact_lookup(facts):
     return {fact["id"]: fact for fact in facts}
 

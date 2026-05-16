@@ -36,6 +36,23 @@ Edit `data/recommendations.json`.
 - Update title, summary, recommendation, next steps, and priority.
 - Add multilingual display content if the UI should show translated advice.
 
+## Update Career Path Suggestions
+
+Edit `data/career_paths.json`.
+
+- Add or adjust majors under `majors`.
+- Map each major to suitable `track_ids`.
+- Update role-track matching facts if a Human Expert says different evidence should matter.
+- Adjust Low / Medium / High internship titles under `readiness_titles`.
+- Add or remove job search platforms under `platforms`.
+- Update `data/references.json` when new public references or expert-provided materials are used.
+
+After editing career paths, run:
+
+```bash
+python tests/test_career_paths.py
+```
+
 ## Update Translations
 
 Edit `data/translations.json`.
