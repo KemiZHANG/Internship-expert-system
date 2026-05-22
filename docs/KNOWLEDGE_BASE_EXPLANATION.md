@@ -11,6 +11,18 @@ The Knowledge Base is stored in `data/`.
 - `references.json`: public sources used for initial knowledge ideas
 - `translations.json`: UI translations for English, 中文, and Bahasa Melayu
 
+## Knowledge Engineering Evidence
+
+The latest version also includes Knowledge Engineering metadata supplied by the group:
+
+- `01_Facts_List.csv` was used to add `evidence_status`, `input_or_condition_meaning`, `used_by_rule_ids`, and `knowledge_engineering_note` to facts.
+- `02_Rule_Base.csv` was used to add `related_dimension`, `expert_alignment_status`, and `knowledge_engineering_note` to rules.
+- `Interview Q&A.docx` supports several readiness factors, especially technical foundation, project explanation, problem-solving, portfolio evidence, interview communication, and soft skills.
+
+This strengthens the project because the KB is no longer only a generic initial rule list; it now records which parts are supported by the interview, which parts are indirectly supported, and which parts still need Human Expert validation.
+
+Important limitation: application-volume thresholds, application tracking, and follow-up rules are still marked as needing rule-level expert validation because the provided interview did not directly discuss those details.
+
 ## Fact Categories
 
 - Application Materials
@@ -70,7 +82,10 @@ The Streamlit app includes a Knowledge Base Viewer with:
 - object type filtering for Facts, Rules, Recommendations, and Career Paths
 - category filtering
 - rule-type filtering for intermediate, final, and recommendation rules
+- evidence-status and KE-note columns for facts
+- expert-alignment and KE-note columns for rules
 - a simple system architecture flow for presentation
+- a Decision Tree / Rule Diagram showing FACTS -> AND/OR/NOT -> DECISIONS
 
 This helps demonstrate that the prototype is a structured rule-based Expert System rather than a simple form.
 

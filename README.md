@@ -268,9 +268,10 @@ For a short presentation, use this flow:
 1. Open the Assessment tab and choose a demo case.
 2. Show the Results tab with Level, Score, Priority, and Advice.
 3. Point out the recommended internship role titles and job search platforms.
-4. Open the Explanation tab to show facts, triggered rules, inferred decisions, and career matching.
-5. Open the Knowledge Base tab to show facts, rules, recommendations, career paths, and filters.
-6. Open the Testing Guide tab and explain the automated tests.
+4. Open the Explanation tab to show facts, triggered rules, inferred decisions, career matching, and Why-not Explanation.
+5. Download the reasoning result if you need demo evidence or report appendix material.
+6. Open the Knowledge Base tab to show facts, rules, recommendations, career paths, filters, and the Decision Tree / Rule Diagram.
+7. Open the Testing Guide tab and explain the automated tests.
 
 ## Languages
 

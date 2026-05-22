@@ -8,9 +8,9 @@ This checklist audits the current prototype against the WID2001 group project ex
 |---|---|---|---|
 | Introduction | Completed | `README.md`, `docs/PROJECT_SUMMARY.md` | Refine wording for final report if needed. |
 | Objectives | Completed | `README.md`, `docs/PROJECT_SUMMARY.md` | Align the final written report wording across group materials. |
-| Human Expert & References / Literature Review | Partially Completed | `docs/INITIAL_KNOWLEDGE_SOURCES.md`, `data/references.json`, `docs/HUMAN_EXPERT_PLACEHOLDER.md`, support letter files outside repo | Add real Human Expert details, interview notes, validation comments, and formal literature review text in the group report. |
+| Human Expert & References / Literature Review | Completed for system evidence; report evidence required | `docs/INITIAL_KNOWLEDGE_SOURCES.md`, `data/references.json`, `docs/HUMAN_EXPERT_PLACEHOLDER.md`, `docs/HUMAN_EXPERT_INTERVIEW_SUMMARY.md`, group-provided `Interview Q&A.docx` | Put full Human Expert identity, evidence, and validation comments in the final report/appendix. Add formal literature review text in the group report. |
 | ES Architecture | Completed | `app.py` Knowledge Base / Testing Guide architecture flow, `README.md`, `docs/PROJECT_SUMMARY.md` | Prepare one clean architecture figure for slides/report. |
-| Knowledge Base / Knowledge Engineering / Decision Tree | Completed | `data/facts.json`, `data/rules.json`, `data/recommendations.json`, `docs/KNOWLEDGE_BASE_EXPLANATION.md`, Knowledge Base page | Optionally convert current rule layers into a polished decision-tree style diagram for slides. |
+| Knowledge Base / Knowledge Engineering / Decision Tree | Completed | `data/facts.json`, `data/rules.json`, `data/recommendations.json`, KE metadata imported from `01_Facts_List.csv` and `02_Rule_Base.csv`, `docs/KNOWLEDGE_BASE_EXPLANATION.md`, Knowledge Base page | Add the KE diagrams from `03_Knowledge_Representation_and_Inference_Diagrams.md` to final slides/report. |
 | Inference Engine / Reasoning Method | Completed | `inference_engine.py`, `docs/INFERENCE_ENGINE_EXPLANATION.md`, Explanation page | Add short pseudocode or flowchart to slides if desired. |
 | User Interface | Completed | `app.py`, Streamlit tabs, multilingual UI, Results / Explanation / Knowledge Base / Testing Guide pages | Capture screenshots for the final presentation deck. |
 | Implementation / Tool Selection | Completed | `README.md`, Python + Streamlit project structure, JSON KB files | Explain briefly in report why Streamlit + JSON were chosen for a local prototype. |
@@ -52,6 +52,20 @@ This checklist audits the current prototype against the WID2001 group project ex
 - roles and contribution table
 - report formatting, tables, figures, and references
 - recorded presentation, demo narration, and Q&A preparation
+
+## Role-Based Inputs Needed by the Programmer
+
+The programmer part is mostly ready as a working prototype, but the full group submission needs evidence and content from other roles:
+
+| Role | Needed Material | Why It Matters |
+|---|---|---|
+| Project Manager | Gantt chart, final timeline, roles table, presentation/demo coordination | Required for report format, planning, and soft-skill evidence |
+| Domain Expert | Internship readiness factors, SDG justification, reliable domain references | Strengthens literature review and domain correctness |
+| Knowledge Engineer | Human Expert interview notes, knowledge acquisition summary, revised rules, decision-tree diagram | Shows knowledge engineering process, not just programming |
+| End User | Student testing feedback, expected results, usability comments | Supports end-user testing and discussion/results |
+| Human Expert / SME | Real expert identity, interview method/date, evidence, validation comments, rule corrections | Keep full evidence in report/appendix; do not publish private details in the app unless permitted |
+
+See `docs/PROGRAMMER_HANDOFF_REQUIREMENTS.md` for a more detailed handoff checklist.
 
 ### Evidence Pointers
 

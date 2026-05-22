@@ -4,10 +4,19 @@
     "text": "Resume is completed",
     "display_text": {
       "en": "Resume is completed",
-      "zh": "已完成简历",
+      "zh": "简历已完成",
       "ms": "Resume telah disiapkan"
     },
-    "category": "Application Materials"
+    "category": "Application Materials",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "User indicates resume_status is resume_not_tailored or resume_tailored",
+    "used_by_rule_ids": [
+      "R1",
+      "R3",
+      "R27",
+      "R40"
+    ],
+    "knowledge_engineering_note": "Q12 mentions 'improve resume'; resume completion itself is implied"
   },
   {
     "id": "F2",
@@ -17,17 +26,33 @@
       "zh": "简历已根据目标实习岗位调整",
       "ms": "Resume disesuaikan dengan latihan industri sasaran"
     },
-    "category": "Application Materials"
+    "category": "Application Materials",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "User selects resume_tailored option",
+    "used_by_rule_ids": [
+      "R1",
+      "R3",
+      "R40"
+    ],
+    "knowledge_engineering_note": "Q12 implies tailoring via 'identify core technical skills required for the targeted internship role'"
   },
   {
     "id": "F3",
     "text": "Has at least one related academic or personal project",
     "display_text": {
       "en": "Has at least one related academic or personal project",
-      "zh": "至少有一个相关课程或个人项目",
+      "zh": "至少有一个相关课程项目或个人项目",
       "ms": "Mempunyai sekurang-kurangnya satu projek akademik atau peribadi berkaitan"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status is one_project / github_readme / strong_portfolio",
+    "used_by_rule_ids": [
+      "R5",
+      "R8",
+      "R9"
+    ],
+    "knowledge_engineering_note": "Q4 / Q12 endorse importance of building related projects (e.g. FYP and small personal projects)"
   },
   {
     "id": "F4",
@@ -37,7 +62,14 @@
       "zh": "有 GitHub、作品集或项目展示",
       "ms": "Mempunyai GitHub, portfolio, atau paparan projek"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status github_readme or strong_portfolio",
+    "used_by_rule_ids": [
+      "R5",
+      "R9"
+    ],
+    "knowledge_engineering_note": "Q7 directly discusses GitHub repositories and project showcases"
   },
   {
     "id": "F5",
@@ -47,7 +79,14 @@
       "zh": "具备基础编程能力",
       "ms": "Mempunyai kemahiran asas pengaturcaraan"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "technical_foundation basic/good/strong",
+    "used_by_rule_ids": [
+      "R10",
+      "R11"
+    ],
+    "knowledge_engineering_note": "Q3 explicitly lists Python/C/C++ as expected"
   },
   {
     "id": "F6",
@@ -57,7 +96,15 @@
       "zh": "理解基础 AI、数据或软件概念",
       "ms": "Memahami konsep asas AI, data, atau perisian"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "technical_foundation good/strong",
+    "used_by_rule_ids": [
+      "R10",
+      "R11",
+      "R13"
+    ],
+    "knowledge_engineering_note": "Q3 endorses 'fundamental software development concepts'"
   },
   {
     "id": "F7",
@@ -67,7 +114,14 @@
       "zh": "练习过实习面试问题",
       "ms": "Pernah berlatih soalan temu duga latihan industri"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "interview_preparation basic and above",
+    "used_by_rule_ids": [
+      "R15",
+      "R16"
+    ],
+    "knowledge_engineering_note": "Q6 implicitly endorses interview practice as remediation for panic and timing weaknesses"
   },
   {
     "id": "F8",
@@ -77,7 +131,13 @@
       "zh": "能用英文介绍自己和项目",
       "ms": "Boleh memperkenalkan diri dan projek dalam bahasa Inggeris"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "interview_preparation technical and above",
+    "used_by_rule_ids": [
+      "R14"
+    ],
+    "knowledge_engineering_note": "Q9 / Q12 emphasize interview communication including project explanation"
   },
   {
     "id": "F9",
@@ -87,7 +147,15 @@
       "zh": "清楚知道目标实习岗位",
       "ms": "Mengetahui peranan latihan industri sasaran dengan jelas"
     },
-    "category": "Career Direction"
+    "category": "Career Direction",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "career_direction general / researched / matched",
+    "used_by_rule_ids": [
+      "R18",
+      "R19",
+      "R20"
+    ],
+    "knowledge_engineering_note": "Q12 implies 'identify the targeted internship role'"
   },
   {
     "id": "F10",
@@ -97,7 +165,16 @@
       "zh": "已申请至少 5 家公司",
       "ms": "Telah memohon sekurang-kurangnya 5 syarikat"
     },
-    "category": "Application Progress"
+    "category": "Application Progress",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "application_progress gte5 / tracked",
+    "used_by_rule_ids": [
+      "R22",
+      "R25",
+      "R46",
+      "R47"
+    ],
+    "knowledge_engineering_note": "Threshold of 5 applications not addressed by expert; needs expert review"
   },
   {
     "id": "F11",
@@ -107,7 +184,13 @@
       "zh": "有工作、社团、志愿、自由职业或项目经验",
       "ms": "Mempunyai pengalaman kerja, kelab, sukarelawan, bebas, atau projek"
     },
-    "category": "Soft Skills and Work Readiness"
+    "category": "Soft Skills and Work Readiness",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "experience checkbox checked",
+    "used_by_rule_ids": [
+      "R26"
+    ],
+    "knowledge_engineering_note": "Q11 highlights responsibility and professional attitude associated with prior experience"
   },
   {
     "id": "F12",
@@ -117,7 +200,15 @@
       "zh": "已准备 LinkedIn 或专业档案",
       "ms": "Telah menyediakan LinkedIn atau profil profesional"
     },
-    "category": "Application Materials"
+    "category": "Application Materials",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "professional_profile checkbox checked",
+    "used_by_rule_ids": [
+      "R1",
+      "R3",
+      "R27"
+    ],
+    "knowledge_engineering_note": "Loosely tied to Q11 professionalism; not directly mentioned"
   },
   {
     "id": "F13",
@@ -127,7 +218,14 @@
       "zh": "能清楚解释技术项目",
       "ms": "Boleh menerangkan projek teknikal dengan jelas"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status strong_portfolio OR interview_preparation mock_ready",
+    "used_by_rule_ids": [
+      "R7",
+      "R8"
+    ],
+    "knowledge_engineering_note": "Q4 / Q8 / Q9 directly emphasize project explanation as decisive"
   },
   {
     "id": "F14",
@@ -137,7 +235,15 @@
       "zh": "已研究公司和岗位要求",
       "ms": "Telah menyelidik syarikat dan keperluan kerja"
     },
-    "category": "Career Direction"
+    "category": "Career Direction",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "career_direction researched / matched",
+    "used_by_rule_ids": [
+      "R18",
+      "R19",
+      "R21"
+    ],
+    "knowledge_engineering_note": "Q12 implies role/JD research as prerequisite for skill identification"
   },
   {
     "id": "F15",
@@ -147,7 +253,15 @@
       "zh": "技术基础较弱",
       "ms": "Asas teknikal masih lemah"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "technical_foundation weak",
+    "used_by_rule_ids": [
+      "R10",
+      "R11",
+      "R12"
+    ],
+    "knowledge_engineering_note": "Negative fact - KE-internal modeling primitive triggered by UI radio"
   },
   {
     "id": "F16",
@@ -157,7 +271,13 @@
       "zh": "没有相关项目",
       "ms": "Tiada projek berkaitan"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "project_status no_project",
+    "used_by_rule_ids": [
+      "R6"
+    ],
+    "knowledge_engineering_note": "Negative fact - KE-internal modeling primitive"
   },
   {
     "id": "F17",
@@ -167,7 +287,14 @@
       "zh": "尚未准备面试",
       "ms": "Belum membuat persediaan temu duga"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "interview_preparation none",
+    "used_by_rule_ids": [
+      "R15",
+      "R16"
+    ],
+    "knowledge_engineering_note": "Negative fact - KE-internal modeling primitive"
   },
   {
     "id": "F18",
@@ -177,7 +304,13 @@
       "zh": "职业方向不清楚",
       "ms": "Hala tuju kerjaya belum jelas"
     },
-    "category": "Career Direction"
+    "category": "Career Direction",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "career_direction unclear",
+    "used_by_rule_ids": [
+      "R20"
+    ],
+    "knowledge_engineering_note": "Negative fact - KE-internal modeling primitive"
   },
   {
     "id": "F19",
@@ -187,7 +320,14 @@
       "zh": "没有简历",
       "ms": "Tiada resume"
     },
-    "category": "Application Materials"
+    "category": "Application Materials",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "resume_status no_resume",
+    "used_by_rule_ids": [
+      "R2",
+      "R3"
+    ],
+    "knowledge_engineering_note": "Negative fact - KE-internal modeling primitive"
   },
   {
     "id": "F20",
@@ -197,17 +337,31 @@
       "zh": "尚未申请公司",
       "ms": "Belum memohon kepada mana-mana syarikat"
     },
-    "category": "Application Progress"
+    "category": "Application Progress",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "application_progress none",
+    "used_by_rule_ids": [
+      "R24"
+    ],
+    "knowledge_engineering_note": "Negative fact - KE-internal modeling primitive; expert did not address"
   },
   {
     "id": "F21",
     "text": "Has applied to fewer than 5 companies",
     "display_text": {
       "en": "Has applied to fewer than 5 companies",
-      "zh": "已申请少于 5 家公司",
+      "zh": "申请少于 5 家公司",
       "ms": "Telah memohon kurang daripada 5 syarikat"
     },
-    "category": "Application Progress"
+    "category": "Application Progress",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "application_progress lt5",
+    "used_by_rule_ids": [
+      "R23",
+      "R46",
+      "R47"
+    ],
+    "knowledge_engineering_note": "Threshold of 5 applications not addressed by expert; needs expert review"
   },
   {
     "id": "F22",
@@ -217,7 +371,15 @@
       "zh": "已准备求职信",
       "ms": "Telah menyediakan surat iringan"
     },
-    "category": "Application Materials"
+    "category": "Application Materials",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "cover_letter checkbox checked",
+    "used_by_rule_ids": [
+      "R1",
+      "R3",
+      "R4"
+    ],
+    "knowledge_engineering_note": "Q12 'improve resume' implicitly extends to broader application materials"
   },
   {
     "id": "F23",
@@ -227,7 +389,14 @@
       "zh": "已准备成绩单或学术文件",
       "ms": "Telah menyediakan transkrip atau dokumen akademik"
     },
-    "category": "Application Materials"
+    "category": "Application Materials",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "academic_documents checkbox checked",
+    "used_by_rule_ids": [
+      "R1",
+      "R4"
+    ],
+    "knowledge_engineering_note": "Loosely supported by application materials theme; needs expert review"
   },
   {
     "id": "F24",
@@ -237,27 +406,49 @@
       "zh": "有两个或以上相关项目",
       "ms": "Mempunyai dua atau lebih projek berkaitan"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status strong_portfolio",
+    "used_by_rule_ids": [
+      "R5"
+    ],
+    "knowledge_engineering_note": "Q12 advises 'build small personal projects' (plural)"
   },
   {
     "id": "F25",
     "text": "Can explain project goal",
     "display_text": {
       "en": "Can explain project goal",
-      "zh": "能解释项目目标",
+      "zh": "能说明项目目标",
       "ms": "Boleh menerangkan matlamat projek"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status github_readme / strong_portfolio",
+    "used_by_rule_ids": [
+      "R5",
+      "R7",
+      "R8"
+    ],
+    "knowledge_engineering_note": "Q4 / Q8 / Q9 directly emphasize ability to explain project goals"
   },
   {
     "id": "F26",
     "text": "Can explain technical implementation",
     "display_text": {
       "en": "Can explain technical implementation",
-      "zh": "能解释技术实现",
+      "zh": "能说明技术实现",
       "ms": "Boleh menerangkan pelaksanaan teknikal"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status strong_portfolio",
+    "used_by_rule_ids": [
+      "R5",
+      "R7",
+      "R8"
+    ],
+    "knowledge_engineering_note": "Q4 / Q8 / Q9 directly emphasize technical decision-making explanation"
   },
   {
     "id": "F27",
@@ -267,17 +458,29 @@
       "zh": "有已部署项目或演示",
       "ms": "Mempunyai projek atau demo yang telah diterbitkan"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status strong_portfolio",
+    "used_by_rule_ids": [
+      "R5"
+    ],
+    "knowledge_engineering_note": "Q7 explicitly cites deployed / production-like projects as more valuable"
   },
   {
     "id": "F28",
     "text": "Has GitHub repository with README",
     "display_text": {
       "en": "Has GitHub repository with README",
-      "zh": "GitHub 仓库包含 README",
+      "zh": "有包含 README 的 GitHub 仓库",
       "ms": "Repositori GitHub mempunyai README"
     },
-    "category": "Project and Portfolio"
+    "category": "Project and Portfolio",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "project_status github_readme / strong_portfolio",
+    "used_by_rule_ids": [
+      "R5"
+    ],
+    "knowledge_engineering_note": "Q3 / Q7 / Q8 endorse GitHub and well-documented projects"
   },
   {
     "id": "F29",
@@ -287,7 +490,14 @@
       "zh": "具备 Python、Java 或 SQL 基础",
       "ms": "Mempunyai asas Python, Java, atau SQL"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "technical_foundation basic and above",
+    "used_by_rule_ids": [
+      "R10",
+      "R11"
+    ],
+    "knowledge_engineering_note": "Q3 directly lists Python/C/C++ as expected programming languages"
   },
   {
     "id": "F30",
@@ -297,7 +507,13 @@
       "zh": "理解 Git 版本控制",
       "ms": "Memahami kawalan versi Git"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "technical_foundation good and above",
+    "used_by_rule_ids": [
+      "R10"
+    ],
+    "knowledge_engineering_note": "Q3 directly endorses GitHub and version control systems"
   },
   {
     "id": "F31",
@@ -307,7 +523,14 @@
       "zh": "理解数据库基础",
       "ms": "Memahami asas pangkalan data"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "technical_foundation strong",
+    "used_by_rule_ids": [
+      "R10",
+      "R13"
+    ],
+    "knowledge_engineering_note": "Q3 says 'fundamental software development concepts' which loosely covers databases"
   },
   {
     "id": "F32",
@@ -317,7 +540,15 @@
       "zh": "具备问题解决能力",
       "ms": "Mempunyai kemahiran menyelesaikan masalah"
     },
-    "category": "Technical Skills"
+    "category": "Technical Skills",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "technical_foundation good and above",
+    "used_by_rule_ids": [
+      "R10",
+      "R11",
+      "R13"
+    ],
+    "knowledge_engineering_note": "Q2 and Q5 explicitly elevate problem-solving above any specific framework"
   },
   {
     "id": "F33",
@@ -327,7 +558,14 @@
       "zh": "练习过技术面试",
       "ms": "Pernah berlatih temu duga teknikal"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "interview_preparation technical and above",
+    "used_by_rule_ids": [
+      "R14",
+      "R15"
+    ],
+    "knowledge_engineering_note": "Q6 / Q12 directly endorse practicing technical interview to overcome common weaknesses"
   },
   {
     "id": "F34",
@@ -337,17 +575,32 @@
       "zh": "练习过行为面试",
       "ms": "Pernah berlatih temu duga tingkah laku"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "interview_preparation technical_behavioral and above",
+    "used_by_rule_ids": [
+      "R14",
+      "R15",
+      "R17"
+    ],
+    "knowledge_engineering_note": "Q6 implicitly covers behavioral aspects (panic, time management); Q12 endorses interview communication practice"
   },
   {
     "id": "F35",
     "text": "Uses STAR method for behavioral answers",
     "display_text": {
       "en": "Uses STAR method for behavioral answers",
-      "zh": "使用 STAR 方法回答行为面试题",
+      "zh": "使用 STAR 方法回答行为问题",
       "ms": "Menggunakan kaedah STAR untuk jawapan tingkah laku"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "interview_preparation technical_behavioral and above",
+    "used_by_rule_ids": [
+      "R14",
+      "R17"
+    ],
+    "knowledge_engineering_note": "STAR method itself not named; Q9 ability to explain challenges and learning aligns with STAR structure"
   },
   {
     "id": "F36",
@@ -357,17 +610,32 @@
       "zh": "完成过模拟面试",
       "ms": "Pernah melakukan temu duga olok-olok"
     },
-    "category": "Interview Preparation"
+    "category": "Interview Preparation",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "interview_preparation mock_ready",
+    "used_by_rule_ids": [
+      "R14"
+    ],
+    "knowledge_engineering_note": "Q6 mock interview directly addresses confidence and time-management weaknesses"
   },
   {
     "id": "F37",
     "text": "Has compared job descriptions",
     "display_text": {
       "en": "Has compared job descriptions",
-      "zh": "比较过多个岗位描述",
+      "zh": "比较过岗位描述",
       "ms": "Telah membandingkan penerangan kerja"
     },
-    "category": "Career Direction"
+    "category": "Career Direction",
+    "evidence_status": "Indirectly supported by Interview Q&A",
+    "input_or_condition_meaning": "career_direction researched / matched",
+    "used_by_rule_ids": [
+      "R18",
+      "R19",
+      "R21",
+      "R48"
+    ],
+    "knowledge_engineering_note": "Q12 implies JD comparison as part of identifying required core skills"
   },
   {
     "id": "F38",
@@ -377,27 +645,48 @@
       "zh": "理解目标岗位所需技能",
       "ms": "Memahami kemahiran yang diperlukan untuk peranan sasaran"
     },
-    "category": "Career Direction"
+    "category": "Career Direction",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "career_direction matched",
+    "used_by_rule_ids": [
+      "R18",
+      "R19"
+    ],
+    "knowledge_engineering_note": "Q12 directly says 'identify the core technical skills required for the targeted internship role'"
   },
   {
     "id": "F39",
     "text": "Tracks application status",
     "display_text": {
       "en": "Tracks application status",
-      "zh": "记录申请进度",
+      "zh": "会记录申请状态",
       "ms": "Menjejaki status permohonan"
     },
-    "category": "Application Progress"
+    "category": "Application Progress",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "application_progress tracked",
+    "used_by_rule_ids": [
+      "R25",
+      "R46"
+    ],
+    "knowledge_engineering_note": "Application tracking not addressed by expert; needs expert review"
   },
   {
     "id": "F40",
     "text": "Sends follow-up email after application or interview",
     "display_text": {
       "en": "Sends follow-up email after application or interview",
-      "zh": "申请或面试后发送跟进邮件",
+      "zh": "申请或面试后会发送跟进邮件",
       "ms": "Menghantar e-mel susulan selepas permohonan atau temu duga"
     },
-    "category": "Application Progress"
+    "category": "Application Progress",
+    "evidence_status": "Initial KB only",
+    "input_or_condition_meaning": "application_progress tracked",
+    "used_by_rule_ids": [
+      "R25",
+      "R47"
+    ],
+    "knowledge_engineering_note": "Follow-up emails not addressed by expert; needs expert review"
   },
   {
     "id": "F41",
@@ -407,16 +696,28 @@
       "zh": "具备沟通能力",
       "ms": "Mempunyai kemahiran komunikasi"
     },
-    "category": "Soft Skills and Work Readiness"
+    "category": "Soft Skills and Work Readiness",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "communication_skill checkbox checked",
+    "used_by_rule_ids": [
+      "R26"
+    ],
+    "knowledge_engineering_note": "Q5 / Q11 directly elevate communication as essential soft skill"
   },
   {
     "id": "F42",
     "text": "Has teamwork and time management experience",
     "display_text": {
       "en": "Has teamwork and time management experience",
-      "zh": "具备团队合作和时间管理经验",
+      "zh": "有团队合作和时间管理经验",
       "ms": "Mempunyai pengalaman kerja berpasukan dan pengurusan masa"
     },
-    "category": "Soft Skills and Work Readiness"
+    "category": "Soft Skills and Work Readiness",
+    "evidence_status": "Supported by Interview Q&A",
+    "input_or_condition_meaning": "teamwork_time checkbox checked",
+    "used_by_rule_ids": [
+      "R26"
+    ],
+    "knowledge_engineering_note": "Q11 endorses responsibility and professionalism which encompass teamwork and time management"
   }
 ]
